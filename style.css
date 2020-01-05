@@ -1,0 +1,27 @@
+#nav_bar {
+    background-color: fuchsia;
+    padding: 25px;
+}
+
+#nav_header {
+    list-style-type: none;
+    background-color: darkslategrey;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav_item {
+    float: right;
+}
+
+#nav_item a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+#nav_item a:hover {
+    background-color: black;
+}
