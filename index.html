@@ -16,6 +16,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="style.css">
+    
+    <script src="main.js" type="text/javascript"></script>
 </head>
 <body>
     <img src="https://cdn4.iconfinder.com/data/icons/bettericons/354/github-circle-512.png"  style="width: 150px"/>
@@ -26,5 +28,20 @@
         <li id="nav_item"><a href="#">Education and Skills</a></li>
         <li id="nav_item"><a href="#">Support</a></li>
     </ul>
+    
+    <div class="slider-container">
+        <div class="slides main">
+            <img src="images/christmas_tree.jpg" style="width: 100%"/>
+        </div>
+        
+        <div class="slides">
+            <img src="images/empire.jpg" style="width: 100%"/>
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot_button" onclick="currentSlide(1)"></span>
+        <span class="dot_button" onclick="currentSlide(2)"></span>
+    </div>
 </body>
 </html>
