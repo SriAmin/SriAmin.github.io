@@ -42,6 +42,13 @@
     display: block;
 }
 
+.line_block {
+    background-color: grey;
+    height: 5px;
+    width: 100%;
+    margin: 5px;
+}
+
 /* The dots/bullets/indicators */
 .dot_button {
   cursor: pointer;
