@@ -14,11 +14,8 @@ body {
 
 #nav_header {
     list-style: none;
-    background-color: #57d5c4;
     margin: 0;
     padding: 0;
-    border-bottom: 5px solid white;
-    border-top: 5px solid white;
     text-align: center;
 }
 
@@ -32,13 +29,31 @@ body {
     padding: 10px 30px;
     text-decoration: none;
     color: white;
+    border-bottom: 3px solid transparent;
+    border-radius: 5px;
+    margin: 0px 10px;
 }
 
 #nav_item a:hover {
-    background-color: #80608d;
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
+    border-bottom: 3px solid #80608d;
 }
 
+
+@keyframes fadeIn {
+    from {
+        border-bottom: 3px solid transparent;
+    }
+    to {
+        border-bottom: 3px solid #80608d;
+    }
+    
+}
+
+
 .slider_container {
+    position: absolute;
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -46,6 +61,8 @@ body {
 
 .slides {
     display: none;
+    margin-top: 25px;
+    border-top: 5px solid #57d5c4;
 }
 
 .main {
@@ -53,7 +70,7 @@ body {
 }
 
 .line_block {
-    background-color: #fafafa;
+    background-color: #57d5c4;
     height: 5px;
     width: 100%;
     margin: 0px;
