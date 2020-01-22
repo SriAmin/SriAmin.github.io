@@ -94,3 +94,20 @@ body {
   background-color: #80608d;
   border-style: none;
 }
+
+.highlight {
+    margin-top: 300px;
+    background-color: white;
+    padding: 15px;
+}
+
+table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+.block {
+    border-radius: 30px;
+    padding: 100px;
+}
