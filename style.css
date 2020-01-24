@@ -1,4 +1,6 @@
-* {box-sizing: border-box}
+* {
+    color: white;
+}
 
 body {
     background-color: #212121;
@@ -95,8 +97,13 @@ body {
   border-style: none;
 }
 
+.header {
+    padding: 125px;
+    text-align: center;
+    
+}
+
 .highlight {
-    margin-top: 300px;
     background-color: white;
     padding: 15px;
 }
