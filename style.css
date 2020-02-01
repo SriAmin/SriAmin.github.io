@@ -108,6 +108,36 @@ body {
     padding: 15px;
 }
 
+.block {
+    width:48%;
+    float:left;
+    margin:5px;
+    background:#ccc;
+}
+.wrap-two {
+    position:relative;
+    width:51%;
+    height:auto;
+    float: right;
+}
+.one {
+    height:510px;
+    float:left;
+}
+.two {
+    height:250px;
+    width: 50%;
+    position:relative;
+}
+.three {
+    height: 250px;
+}
+
+.four {
+    height: 250px;
+}
+
+/*
 table {
     margin: auto;
     border-collapse: separate;
@@ -117,4 +147,5 @@ table {
 .block {
     border-radius: 30px;
     padding: 100px;
-}
+}*/
+konichiwa
