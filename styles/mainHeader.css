@@ -1,22 +1,9 @@
-body{
-    background-image: url('./images/background.jpg');
-    background-attachment: fixed;
-    font-family: NotoSans, 'sans-serif';
-    margin: 0;
-}
-
-@font-face {
-    font-family: 'NotoSans';
-    src: local('NotoSans'), url(./fonts/NotoSans-Regular.ttf) format('truetype');
-  
-}
-
 .triangleImage {
     width: 0;
     height: 0;
     border-top: 60vh solid #b388eb;
     border-right: 40vw solid transparent;
-    border-left: 20vw solid #b388eb;
+    border-left: 23vw solid #b388eb;
     margin-top: -30px;
     animation-name: slideIn;
     animation-duration: 0.75s;
@@ -112,20 +99,21 @@ body{
 }
 
 @media only screen and (max-width: 766px) {
-    .headerShader {
-        display: none
-    }
-    .headerTitle p {
+    .headerTitle {
         display: none;
     }
+    
     .triangleImage {
-        display: none;
+        border: 0;
     }
+    
     .mainContent {
-        align-items: center;
+        width: 100%;
+        justify-content: center;
         flex-direction: column;
         background-color: #b388eb;
-        padding-bottom: 5vh;
+        margin-top: 0;
+        padding-bottom: 5px;
     }
     
     #mainTagline {
