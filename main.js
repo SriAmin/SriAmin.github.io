@@ -5,7 +5,7 @@ function sendEmail(){
 
     emailjs.send('service_1zcvmpn', 'template_hiub3al', {
         subject: formData[2].value,
-        from_name: formData[1] + "Job Portfolio",
+        from_name: formData[1].value + "Job Portfolio",
         from_email: formData[0].value,
         message: formData[3].value,
         }, 'user_r8pQgRMG3WsTjHjjUKCbr').then(function(response) {
@@ -15,5 +15,5 @@ function sendEmail(){
             console.log('FAILED...', error);
             alert("Sorry!\nSome error occured, I'll see what I can do but in the meantime can you try again")
         }
-                                              )
+    )
 }
