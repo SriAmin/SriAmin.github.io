@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -50,7 +51,7 @@
     <script src="main.js" type="text/javascript"></script>
 </head>
 <body>
-    <div id="Main Header">
+    <section id="Main Header">
         <div class="triangleImage"/>
         <div class="mainContent">
             <div class="profile">
@@ -75,8 +76,8 @@
               <p class="mainHeader">Sri Amin</p>
             </div>
       </div>
-    </div>
-    <div id="About">
+    </section>
+    <section id="About">
       <p class="aboutTitle">About Me</p>
       <p class="aboutDescription">Welcome to my portfolio, a portal to know a little bit about me and the recent projects I've worked on and displayed. It'll also link to my LinkedIn and Github page below. Below is a list of my skills that I believe can make an excellent employee in the workforce.</p>
       <div class="aboutList">
@@ -155,8 +156,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div id="Projects">
+    </section>
+    <section id="Projects">
         <div class="projectShader">
             <img src="./images/projectIcon.png" alt="Project Icon" class="projectIcon" />
             <p class="projectsTitle">Projects</p>
@@ -202,8 +203,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div>
+    </section>
+    <section id="Contacts">
         <div class="contactShader">
             <img src="./images/mailIcon.png" alt="Mail Icon" class="mailIcon" />
             <p class="contactsTitle">Contact Me</p>
@@ -223,6 +224,13 @@
                 <a href="" onClick="sendEmail()">Send</a>
             </form>
         </div>
+        </section>
+    <footer id="footerContainer">
+        <div className="socialLinkGroup">
+          <a className="socialLink" href="https://github.com/SriAmin" target="_blank" rel="noopener noreferrer"><img src="./images/github.png" alt="gitHub" className="socialIcon"/></a>
+          <a className="socialLink" href="https://www.linkedin.com/in/sri-amin/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedIn.png" alt="linkedIn" className="socialIcon"/></a>
         </div>
+        <p style="color: #804994; fontStyle: italic">Want to see more? Take a look at my social media accounts.</p>
+    </footer>
 </body>
 </html>
