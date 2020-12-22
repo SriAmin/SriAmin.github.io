@@ -15,10 +15,19 @@
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_r8pQgRMG3WsTjHjjUKCbr");
+        })();
+    </script>
+
     <link rel="stylesheet" href="./styles/mainHeader.css">
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/projects.css">
-
+    <link rel="stylesheet" href="styles/contact.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -194,5 +203,26 @@
             </div>
         </div>
     </div>
+    <div>
+        <div class="contactShader">
+            <img src="./images/mailIcon.png" alt="Mail Icon" class="mailIcon" />
+            <p class="contactsTitle">Contact Me</p>
+        </div>
+        <div class="contactContainer">
+            <p class="contactDescription">I would love to have a conversation with you, whether that would be over coffee, Zoom, or even over a game of Super Smash Brothers. Below is my contact form. I'll try to reply as soon as possible. I look forward to connecting if you're interested, and if not, I hoped you enjoyed the website and its design. If you have any suggestions to improve the portfolio, please and don't be afraid to send an email with the comment.</p>
+            <form class="contactForm" id="contactForm">
+                <div class="textInputGroup">
+                    <input type="text" placeholder="Email" name="email" class="formTextInput"/>
+                    <input type="text" placeholder="Name" name="name" class="formTextInput"/>
+                </div>
+                <input type="text" placeholder="Subject" name="subject" class="formTextInput"/>
+                <label style={{marginTop: 50, fontSize: 22, marginBottom: 15}}>
+                    Message:
+                </label>
+                <textarea class="formTextArea" name="message"> </textarea>
+                <a href="" onClick="sendEmail()">Send</a>
+            </form>
+        </div>
+        </div>
 </body>
 </html>
