@@ -81,7 +81,7 @@
 
 @keyframes slideIn {
     from {border-left-width: 0vw; border-right-width: 0vw;}
-    to {border-left-width: 20vw; border-right-width: 40vw;}
+    to {border-left-width: 23vw; border-right-width: 40vw;}
 }
 
 @keyframes slideInPhone {
@@ -113,7 +113,7 @@
         flex-direction: column;
         background-color: #b388eb;
         margin-top: 0;
-        padding-bottom: 5px;
+        padding-bottom: 15px;
     }
     
     #mainTagline {

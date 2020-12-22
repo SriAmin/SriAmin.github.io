@@ -1,0 +1,153 @@
+#About {
+    padding: 5vh;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutTitle {
+    align-self: center;
+    font-size: calc(22px + 1vmin);
+    border-bottom: 1px solid black;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.aboutDescription {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.aboutList {
+    margin-top: 5vh;
+    padding-bottom: 3vh;
+    background-color: white;
+    box-shadow: -5px 5px 15px rgb(121, 121, 121);
+    border-radius: 25px;
+    border: 0.25px solid rgb(161, 161, 161);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.listPoints {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.listPointsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.listItem {
+    display: flex;
+    width: 21vw;
+    height: 20vh;
+    border: 1px solid black;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemPicture {
+    display: flex;
+    margin-right: 2vw;
+    width: 4vw;
+    height: 8vh;
+    align-self: center;
+
+}
+
+.itemTitle {
+    flex: 1;
+    font-size: calc(2px + 1vw);
+    font-weight: 500;
+    margin-bottom: -5px;
+    justify-self: flex-start;
+}
+
+.itemDesc {
+    flex: 1;
+    font-family: serif;
+    font-size: calc(5px + 0.60vw);
+    margin-bottom: 10px;
+    justify-self: flex-start;
+}
+
+@media only screen and (max-width: 1240px) {
+    .itemPicture {
+        width: calc(5px + 3vw);
+        height: calc(5px + 4vh);
+    }
+    .listItem {
+        display: flex;
+        width: 22.5vw;
+    }
+    .itemTitle {
+        font-weight: bold;
+    }
+    .itemDesc {
+        font-size: calc(5px + 0.7vmax);
+    }
+    .aboutList {
+        box-shadow: none;
+        margin-left: -5vw;
+        margin-right: 0;
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    #About{
+        margin-top: 48vh;
+    }
+    
+    .listPointsSection {
+        flex-direction: column;
+    }
+    
+    .itemPicture {
+        margin-top: 3vh;
+        width: calc(5px + 7vw);
+        height: calc(5px + 4vh);
+        margin-right: 6vw;
+    }
+    
+    .listItem {
+        display: flex;
+        width: 70vw;
+        padding: 2vh 2vw 2vh 2vw;
+        border: none;
+        border-bottom: 1px solid grey;
+    }
+    
+    .lastItem {
+        border: none;
+    }
+    
+    .itemTitle {
+        font-size: calc(8px + 1.5vw);
+    }
+    
+    .aboutList {
+        box-shadow: none;
+        margin-left: -5vw;
+        margin-right: 0;
+        width: 90vw;
+    }
+}
