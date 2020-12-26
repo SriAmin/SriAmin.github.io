@@ -1,29 +1,52 @@
 import {update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeCoordinates, checkSnakeIntersections} from './snake.js'
 import { update as updateFood, draw as drawFood } from './food.js'
+import {draw as drawStartState} from './states/startState.js';
+import {draw as drawEndStae} from './states/endState.js';
 
 const snakeBoard = document.getElementById("snakeBoard")
-const GRID_SIZE = 21;
+const title = document.getElementById("title")
 
+const GRID_SIZE = 21;
+let gameState = 0;
 let lastRenderTime = 0
-let gameOver = false;
 
 function update(){
-    updateSnake()
-    updateFood()
-    checkDeathCondition()
+    switch (gameState) {
+        case 0:
+            document.addEventListener('keydown', gameStateIncrement)
+            break;
+        case 1:
+            updateSnake()
+            updateFood()
+            break;
+        case 2:
+            document.addEventListener('keydown', () => {
+                window.location.reload()
+            })
+            break;
+    }
 }
 
 function draw(){
     snakeBoard.innerHTML = ''
-    drawSnake(snakeBoard)
-    drawFood(snakeBoard)
+    title.innerHTML = ''
+    switch (gameState) {
+        case 0:
+            drawStartState(title);
+            break;
+        case 1:
+            drawSnake(snakeBoard)
+            drawFood(snakeBoard)
+            break;
+        case 2:
+            drawEndStae(title);
+            break;
+    }
 }
 
 function main(currentTime) {
-    if (gameOver){
-        if (confirm('You lost. Press ok to try again!'))
-            window.location.reload()
-        return
+    if (checkDeathCondition()){
+        gameState = 2;
     }
 
     window.requestAnimationFrame(main)
@@ -37,11 +60,15 @@ function main(currentTime) {
     draw()
 }
 
+function gameStateIncrement(){
+    gameState += 1;
+    document.removeEventListener('keydown', gameStateIncrement)
+}
+
 function checkDeathCondition() {
     let snakeCoords = getSnakeCoordinates();
-    gameOver = snakeCoords.x < 1 || snakeCoords.x > GRID_SIZE
+    return snakeCoords.x < 1 || snakeCoords.x > GRID_SIZE
                     || snakeCoords.y < 1 || snakeCoords.y > GRID_SIZE || checkSnakeIntersections()
-
 }
 
 window.requestAnimationFrame(main)
