@@ -4,7 +4,12 @@ import {draw as drawStartState} from './states/startState.js';
 import {draw as drawEndStae} from './states/endState.js';
 
 const snakeBoard = document.getElementById("snakeBoard")
-const title = document.getElementById("title")
+const overlay = document.getElementById("overlay")
+overlay.style.display = "block"
+
+overlay.onclick = function () {
+    overlay.style.display = "none";
+}
 
 const GRID_SIZE = 21;
 let gameState = 0;
@@ -13,39 +18,48 @@ let lastRenderTime = 0
 function update(){
     switch (gameState) {
         case 0:
-            document.addEventListener('keydown', gameStateIncrement)
+            if (overlay.style.display == "none")
+                gameState += 1;
             break;
         case 1:
             updateSnake()
             updateFood()
             break;
         case 2:
-            document.addEventListener('keydown', () => {
-                window.location.reload()
-            })
+            if (overlay.style.display == "none")
+                window.location.reload();
             break;
     }
 }
 
 function draw(){
     snakeBoard.innerHTML = ''
-    title.innerHTML = ''
+    overlay.innerHTML = ''
     switch (gameState) {
         case 0:
-            drawStartState(title);
+            drawStartState(overlay);
             break;
         case 1:
             drawSnake(snakeBoard)
             drawFood(snakeBoard)
+            const score = document.createElement('h5');
+
+            score.innerText = "Score: 0";
+
+            score.style.gridColumnStart = 0;
+            score.style.gridRowStart = 0;
+            score.style.color = "white"
+            overlay.appendChild(score)
             break;
         case 2:
-            drawEndStae(title);
+            drawEndStae(overlay);
             break;
     }
 }
 
 function main(currentTime) {
     if (checkDeathCondition()){
+        overlay.style.display = "block";
         gameState = 2;
     }
 
@@ -58,11 +72,6 @@ function main(currentTime) {
     lastRenderTime = currentTime
     update()
     draw()
-}
-
-function gameStateIncrement(){
-    gameState += 1;
-    document.removeEventListener('keydown', gameStateIncrement)
 }
 
 function checkDeathCondition() {
