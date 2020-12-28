@@ -1,5 +1,3 @@
-export const SNAKE_SPEED = 5;
-
 const snakeCoordinates = [
     {x: 11, y: 11},
 ]

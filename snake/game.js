@@ -1,33 +1,33 @@
-import {update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeCoordinates, checkSnakeIntersections} from './snake.js'
-import { update as updateFood, draw as drawFood } from './food.js'
-import {draw as drawStartState} from './states/startState.js';
-import {draw as drawEndStae} from './states/endState.js';
+import {update as updateStartState, draw as drawStartState} from './states/startState.js';
+import {update as updatePlayState, draw as drawPlayState} from './states/playState.js' 
+import {update as updateEndState, draw as drawEndStae} from './states/endState.js';
 
 const snakeBoard = document.getElementById("snakeBoard")
 const overlay = document.getElementById("overlay")
-overlay.style.display = "block"
-
-overlay.onclick = function () {
-    overlay.style.display = "none";
-}
 
 const GRID_SIZE = 21;
+const GAME_SPEED = 8;
+
 let gameState = 0;
 let lastRenderTime = 0
 
 function update(){
     switch (gameState) {
         case 0:
-            if (overlay.style.display == "none")
-                gameState += 1;
+            overlay.onclick = function(){
+                gameState += 1
+                overlay.onclick = null;
+            }
             break;
         case 1:
-            updateSnake()
-            updateFood()
+            if (updatePlayState(GRID_SIZE)){
+                overlay.style.display = "block";
+                overlay.style.backgroundColor = "rgba(0,0,0,0.7)"
+                gameState += 1;
+            }
             break;
         case 2:
-            if (overlay.style.display == "none")
-                window.location.reload();
+            updateEndState(overlay)
             break;
     }
 }
@@ -40,16 +40,8 @@ function draw(){
             drawStartState(overlay);
             break;
         case 1:
-            drawSnake(snakeBoard)
-            drawFood(snakeBoard)
-            const score = document.createElement('h5');
-
-            score.innerText = "Score: 0";
-
-            score.style.gridColumnStart = 0;
-            score.style.gridRowStart = 0;
-            score.style.color = "white"
-            overlay.appendChild(score)
+            overlay.style.backgroundColor = "rgba(0,0,0,0)"
+            drawPlayState(snakeBoard)
             break;
         case 2:
             drawEndStae(overlay);
@@ -58,26 +50,15 @@ function draw(){
 }
 
 function main(currentTime) {
-    if (checkDeathCondition()){
-        overlay.style.display = "block";
-        gameState = 2;
-    }
-
     window.requestAnimationFrame(main)
     const secondsSinceLastRender = (currentTime-lastRenderTime) / 1000
     
-    if (secondsSinceLastRender < 1 / SNAKE_SPEED)
+    if (secondsSinceLastRender < 1 / GAME_SPEED)
         return    
 
     lastRenderTime = currentTime
     update()
     draw()
-}
-
-function checkDeathCondition() {
-    let snakeCoords = getSnakeCoordinates();
-    return snakeCoords.x < 1 || snakeCoords.x > GRID_SIZE
-                    || snakeCoords.y < 1 || snakeCoords.y > GRID_SIZE || checkSnakeIntersections()
 }
 
 window.requestAnimationFrame(main)
