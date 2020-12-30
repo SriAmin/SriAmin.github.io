@@ -1,9 +1,9 @@
 import {onSnake, expandSnake} from './snake.js'
 
-const GRID_SIZE = 21
+const GRID_SIZE = 32
 const EXPANSION_RATE = 1
 
-let foodCoordinates = getRandCoordinates()
+export let foodCoordinates = getRandCoordinates()
 
 export function update(){
     if (onSnake(foodCoordinates)) {
@@ -21,12 +21,22 @@ export function draw(gameBoard){
     gameBoard.appendChild(food)
 }
 
+export function setNewCoordinates(xBoundry, yBoundry){
+    console.log(xBoundry)
+    let newFoodCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - xBoundry))) + xBoundry, y: Math.floor((Math.random() * (GRID_SIZE - yBoundry))) + yBoundry}
+    
+    while(onSnake(newFoodCoordinates)){
+        newFoodCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - xBoundry))) + xBoundry, y: Math.floor((Math.random() * (GRID_SIZE - yBoundry))) + yBoundry}
+    }    
+    console.log(newFoodCoordinates)
+    foodCoordinates = newFoodCoordinates
+}
+
 function getRandCoordinates() {
-    let newFoodCoordinates = {x: Math.floor((Math.random() * GRID_SIZE)), y: Math.floor((Math.random() * GRID_SIZE))}
+    let newFoodCoordinates = {x: Math.floor((Math.random() * GRID_SIZE)) + 1, y: Math.floor((Math.random() * GRID_SIZE)) + 1}
 
     while(onSnake(newFoodCoordinates)){
         newFoodCoordinates = {x: Math.floor((Math.random() * GRID_SIZE)), y: Math.floor((Math.random() * GRID_SIZE))}
-    }
-    console.log(newFoodCoordinates)
+    }    
     return newFoodCoordinates;
 }

@@ -9,7 +9,6 @@ window.addEventListener('keydown', e => {
     switch (e.key) {
         case 'ArrowUp':
             if (lastVelocity.x != 0) {
-                console.log("This was Called")
                 break;
             }
             velocity = {x: -1, y: 0}
@@ -55,7 +54,7 @@ export function draw(gameBoard){
     })
 }
 
-export function onSnake(position, {ignoreHead = false} = {}) {
+export function onSnake(position, ignoreHead = false) {
     return snakeCoordinates.some((segment, index) => {
         if (ignoreHead && index === 0)
             return false

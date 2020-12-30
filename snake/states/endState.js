@@ -1,10 +1,12 @@
+import {draw as drawSnake} from '../snake.js'
+
 export function update(overlay){
     overlay.onclick = function () {
         window.location.reload();
     }
 }
 
-export function draw(gameBoard) {
+export function draw(gameBoard) {    
     const title = document.createElement('h1');
     title.classList.add('overlayText')
     title.innerText = "Game Over";

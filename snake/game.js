@@ -5,11 +5,12 @@ import {update as updateEndState, draw as drawEndStae} from './states/endState.j
 const snakeBoard = document.getElementById("snakeBoard")
 const overlay = document.getElementById("overlay")
 
-const GRID_SIZE = 21;
-const GAME_SPEED = 8;
+const GRID_SIZE = 32;
+const GAME_SPEED = 10;
 
 let gameState = 0;
 let lastRenderTime = 0
+let wallInterval
 
 function update(){
     switch (gameState) {
@@ -17,6 +18,7 @@ function update(){
             overlay.onclick = function(){
                 gameState += 1
                 overlay.onclick = null;
+                overlay.style.backgroundColor = "rgba(0,0,0,0)"
             }
             break;
         case 1:
@@ -40,11 +42,11 @@ function draw(){
             drawStartState(overlay);
             break;
         case 1:
-            overlay.style.backgroundColor = "rgba(0,0,0,0)"
             drawPlayState(snakeBoard)
             break;
         case 2:
             drawEndStae(overlay);
+            drawPlayState(snakeBoard);
             break;
     }
 }
