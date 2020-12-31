@@ -1,10 +1,10 @@
 import {onSnake} from './snake.js'
 import {breakWalls} from './wall.js'
-
-const GRID_SIZE = 32
+import {GRID_SIZE} from './constants.js'
 
 export let powerupCoordinates = getRandCoordinates()
 
+//Updates and checks if the snake intersects with the powerup
 export function update(){
     if (onSnake(powerupCoordinates)) {
         breakWalls()
@@ -12,6 +12,7 @@ export function update(){
     }
 }
 
+//Draws the powerup element on the snake board
 export function draw(gameBoard){
     const powerup = document.createElement('div')
     powerup.style.gridRowStart = powerupCoordinates.x
@@ -21,16 +22,17 @@ export function draw(gameBoard){
     gameBoard.appendChild(powerup)
 }
 
-export function setNewCoordinates(xBoundry, yBoundry){
-    console.log(xBoundry)
-    let newPowerupCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - xBoundry))) + xBoundry, y: Math.floor((Math.random() * (GRID_SIZE - yBoundry))) + yBoundry}
+//Sets the new cooordinates for the powerup within the walls if it collides with the walls
+export function setNewCoordinates(boundry){
+    let newPowerupCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - boundry))) + boundry, y: Math.floor((Math.random() * (GRID_SIZE - boundry))) + boundry}
     
     while(onSnake(newPowerupCoordinates)){
-        newPowerupCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - xBoundry))) + xBoundry, y: Math.floor((Math.random() * (GRID_SIZE - yBoundry))) + yBoundry}
+        newPowerupCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - boundry))) + boundry, y: Math.floor((Math.random() * (GRID_SIZE - boundry))) + boundry}
     }    
     powerupCoordinates = newPowerupCoordinates
 }
 
+//Set random coordinates for the powerup, makes sure it doesn't intersect with the snake
 function getRandCoordinates() {
     let newPowerupCoordinates = {x: Math.floor((Math.random() * GRID_SIZE)) + 1, y: Math.floor((Math.random() * GRID_SIZE)) + 1}
 

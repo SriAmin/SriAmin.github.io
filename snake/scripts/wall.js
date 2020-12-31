@@ -1,17 +1,17 @@
-import {getSnakeCoordinates, onSnake} from './snake.js'
+import {GRID_SIZE, SNAKE_COORDINATES} from './constants.js'
 import {setNewCoordinates as setNewFoodCoordinates, foodCoordinates} from './food.js'
 import {setNewCoordinates as setNewPowerupCoordinates, powerupCoordinates} from './powerup.js'
-
-const GRID_SIZE = 32
 
 let walls = []
 let wallsIndex = 1
 let wallInterval;
 
+//Update function to check if the wall collides with food or a powerup
 export function update() {
     checkItemCollision()
 }
 
+//Draw function to draw each wall in the walls array
 export function draw(gameBoard) {
     walls.forEach(wall => {
         wall.forEach(block => {
@@ -25,14 +25,16 @@ export function draw(gameBoard) {
     });
 }
 
-export function setWallInterval() {
-    wallInterval = window.setInterval(setWalls, Math.floor(Math.random() * 2500) + 2500)
-}
+//Set the interval for the wall spawning
+export function setWallInterval() { wallInterval = window.setInterval(setWalls, Math.floor(Math.random() * 2500) + 2500) }
+
+//Clears the wall spawning interval when the game is over
+export function clearWallInterval() { window.clearInterval(wallInterval) }
 
 export function setWalls() {
     let wall = []
 
-    //Create horizontal sides of the wall
+    //Create horizontal sides of the walls
     for (let y = 1; y <= 32; y++) {
         let tempCoordinates = {x: wallsIndex, y: y}
         if (!checkWallInclusion(tempCoordinates))
@@ -43,7 +45,7 @@ export function setWalls() {
             wall.push(tempCoordinates)
     }
     
-    //Create vertical sides of the wall
+    //Create vertical sides of the walls
     for (let x = 1; x <= 32; x++) {
         let tempCoordinates = {x: x, y: wallsIndex}
         if (!checkWallInclusion(tempCoordinates))
@@ -54,19 +56,14 @@ export function setWalls() {
             wall.push(tempCoordinates)
     }
 
+    //Adds the new array of walls and increases the index
     walls.push(wall)
     wallsIndex += 1
-
-    // if (wallsIndex < 16) {
-    //     window.setTimeout(setWalls, Math.floor(Math.random() * 2500) + 2500)
-    // }
-
-    if (wallsIndex >= 16)
-        window.clearInterval(wallInterval)
 }
 
+//Checks if the snake collides with the walls
 export function checkWallCollision() {
-    let snakeCoordinates = getSnakeCoordinates()
+    let snakeCoordinates = SNAKE_COORDINATES[0]
     
     if(snakeCoordinates.x < wallsIndex || snakeCoordinates.x > (GRID_SIZE - wallsIndex) + 1)
         return true
@@ -76,16 +73,16 @@ export function checkWallCollision() {
     return false
 }
 
+//Take the last set of walls and removes them, makes sure that walls exist in the array
 export function breakWalls() {
     if (wallsIndex > 1) {
-        console.log(walls)
         walls.pop()
-        console.log(walls)
     }
 
     wallsIndex = Math.min(1, wallsIndex)
 }
 
+//Returns if food or the powerups collides with the walls
 function checkItemCollision() {
     let collisionCheck = false
 
@@ -93,15 +90,15 @@ function checkItemCollision() {
         wallSet.forEach(wall => {
             //console.log(wall)
             if (wall.x === foodCoordinates.x && wall.y === foodCoordinates.y)
-                setNewFoodCoordinates(wallsIndex, wallsIndex)
+                setNewFoodCoordinates(wallsIndex)
             if (wall.x === powerupCoordinates.x && wall.y === powerupCoordinates.y)
-                setNewPowerupCoordinates(wallsIndex, wallsIndex)
+                setNewPowerupCoordinates(wallsIndex)
         });
     });
     return collisionCheck
 }
 
-
+//Makes sure that the new segments don't exist in the walls arrays
 function checkWallInclusion(coordinates) {
     let exist = false;
     walls.forEach(wall => {
