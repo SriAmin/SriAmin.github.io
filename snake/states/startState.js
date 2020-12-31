@@ -6,15 +6,15 @@ export function update(overlay){
 }
 
 export function draw(gameBoard){
-    const title = document.createElement('h1');
-    title.classList.add('overlayText')
-    title.innerText = "Welcome to Snake";
+    // const title = document.createElement('h1');
+    // title.classList.add('overlayText')
+    // title.innerText = "Welcome to Snake";
 
-    const subtitle = document.createElement("h2")
-    subtitle.classList.add('overlayText')
-    subtitle.innerText = "Click Anywhere to Play"
-    subtitle.style.marginTop = "25vh"
+    // const subtitle = document.createElement("h2")
+    // subtitle.classList.add('overlayText')
+    // subtitle.innerText = "Click Anywhere to Play"
+    // subtitle.style.marginTop = "25vh"
 
-    gameBoard.appendChild(title)
-    gameBoard.appendChild(subtitle)
+    // gameBoard.appendChild(title)
+    // gameBoard.appendChild(subtitle)
 }

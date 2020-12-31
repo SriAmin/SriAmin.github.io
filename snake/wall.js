@@ -2,14 +2,14 @@ import {getSnakeCoordinates, onSnake} from './snake.js'
 import {setNewCoordinates as setNewFoodCoordinates, foodCoordinates} from './food.js'
 import {setNewCoordinates as setNewPowerupCoordinates, powerupCoordinates} from './powerup.js'
 
-let walls = []
-let wallsIndex = 1
 const GRID_SIZE = 32
 
+let walls = []
+let wallsIndex = 1
+let wallInterval;
+
 export function update() {
-    if (checkItemCollision()) {
-        setNewFoodCoordinates(wallsIndex, wallsIndex)
-    }
+    checkItemCollision()
 }
 
 export function draw(gameBoard) {
@@ -25,8 +25,13 @@ export function draw(gameBoard) {
     });
 }
 
+export function setWallInterval() {
+    wallInterval = window.setInterval(setWalls, Math.floor(Math.random() * 2500) + 2500)
+}
+
 export function setWalls() {
     let wall = []
+
     //Create horizontal sides of the wall
     for (let y = 1; y <= 32; y++) {
         let tempCoordinates = {x: wallsIndex, y: y}
@@ -52,24 +57,12 @@ export function setWalls() {
     walls.push(wall)
     wallsIndex += 1
 
-    if (wallsIndex < 16) {
-        window.setTimeout(setWalls, Math.floor(Math.random() * 2500) + 2500)
-    }
-}
+    // if (wallsIndex < 16) {
+    //     window.setTimeout(setWalls, Math.floor(Math.random() * 2500) + 2500)
+    // }
 
-function checkItemCollision() {
-    let collisionCheck = false
-
-    walls.forEach(wallSet => {
-        wallSet.forEach(wall => {
-            //console.log(wall)
-            if (wall.x === foodCoordinates.x && wall.y === foodCoordinates.y)
-                setNewFoodCoordinates(wallsIndex, wallsIndex)
-            if (wall.x === powerupCoordinates.x && wall.y === powerupCoordinates.y)
-                setNewPowerupCoordinates(wallsIndex, wallsIndex)
-        });
-    });
-    return collisionCheck
+    if (wallsIndex >= 16)
+        window.clearInterval(wallInterval)
 }
 
 export function checkWallCollision() {
@@ -92,6 +85,22 @@ export function breakWalls() {
 
     wallsIndex = Math.min(1, wallsIndex)
 }
+
+function checkItemCollision() {
+    let collisionCheck = false
+
+    walls.forEach(wallSet => {
+        wallSet.forEach(wall => {
+            //console.log(wall)
+            if (wall.x === foodCoordinates.x && wall.y === foodCoordinates.y)
+                setNewFoodCoordinates(wallsIndex, wallsIndex)
+            if (wall.x === powerupCoordinates.x && wall.y === powerupCoordinates.y)
+                setNewPowerupCoordinates(wallsIndex, wallsIndex)
+        });
+    });
+    return collisionCheck
+}
+
 
 function checkWallInclusion(coordinates) {
     let exist = false;
