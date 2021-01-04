@@ -7,7 +7,7 @@ export let foodCoordinates = getRandCoordinates()
 export function update(){
     if (onSnake(foodCoordinates)) {
         const foodSound = new Audio('assets/audio/Food.wav')
-        foodSound.volume = 0.4
+        foodSound.volume = 0.15
         foodSound.loop = false
         foodSound.play()
 

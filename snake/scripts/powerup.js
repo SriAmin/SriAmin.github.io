@@ -8,7 +8,7 @@ export let powerupCoordinates = getRandCoordinates()
 export function update(){
     if (onSnake(powerupCoordinates)) {
         const powerupSound = new Audio('assets/audio/Powerup.wav')
-        powerupSound.volume = 0.4
+        powerupSound.volume = 0.15
         powerupSound.loop = false
         powerupSound.play()
 

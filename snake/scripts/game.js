@@ -7,7 +7,7 @@ const gameScreen = document.getElementById("gameScreen")
 const endScreen = document.getElementById("endScreen")
 
 const backgroundMusic = new Audio('assets/audio/GourmetRace.mp3')
-backgroundMusic.volume = 0.40;
+backgroundMusic.volume = 0.15;
 backgroundMusic.loop = true
 backgroundMusic.play()
 
@@ -30,7 +30,7 @@ function update() {
                 gameScreen.style.display = "flex"
 
                 const selectSound = new Audio('assets/audio/Select.wav')
-                selectSound.volume = 0.4
+                selectSound.volume = 0.15
                 selectSound.loop = false
                 selectSound.play()
             }

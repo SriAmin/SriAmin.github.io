@@ -23,7 +23,7 @@ export function update(gridSize) {
     //Clears the interval if the snake has died
     if (checkDeathCondition(gridSize)) {
         const deathSound = new Audio('assets/audio/Death.wav')
-        deathSound.volume = 0.4
+        deathSound.volume = 0.05
         deathSound.loop = false
         deathSound.play()
 
