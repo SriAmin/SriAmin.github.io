@@ -7,6 +7,11 @@ export let powerupCoordinates = getRandCoordinates()
 //Updates and checks if the snake intersects with the powerup
 export function update(){
     if (onSnake(powerupCoordinates)) {
+        const powerupSound = new Audio('assets/audio/Powerup.wav')
+        powerupSound.volume = 0.4
+        powerupSound.loop = false
+        powerupSound.play()
+
         breakWalls()
         powerupCoordinates = getRandCoordinates()
     }

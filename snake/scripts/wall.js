@@ -88,7 +88,6 @@ function checkItemCollision() {
 
     walls.forEach(wallSet => {
         wallSet.forEach(wall => {
-            //console.log(wall)
             if (wall.x === foodCoordinates.x && wall.y === foodCoordinates.y)
                 setNewFoodCoordinates(wallsIndex)
             if (wall.x === powerupCoordinates.x && wall.y === powerupCoordinates.y)

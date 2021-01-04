@@ -1,19 +1,17 @@
-import {update as updateSnake, draw as drawSnake, checkSnakeIntersections} from './snake.js'
+import {update as updateSnake, draw as drawSnake, checkSnakeIntersections, score} from './snake.js'
 import {update as updateFood, draw as drawFood} from './food.js'
 import {update as updatePowerup, draw as drawPowerup} from './powerup.js'
 import {update as updateWall, draw as drawWall, checkWallCollision, setWallInterval, clearWallInterval} from './wall.js'
 import {SNAKE_COORDINATES} from './constants.js'
 
-let score = 0;
 let scoreInterval
 let intervalCheck = false
 
 //Updates logic for snake, food, powerup and walls for the game
 export function update(gridSize) {
     //Sets the interval to spawn the walls on a random timer
-    if (!intervalCheck){
+    if (!intervalCheck) {
         setWallInterval()
-        scoreInterval = window.setInterval(() => {score += 1}, 1)                
         intervalCheck = true
     }
 
@@ -24,6 +22,11 @@ export function update(gridSize) {
 
     //Clears the interval if the snake has died
     if (checkDeathCondition(gridSize)) {
+        const deathSound = new Audio('assets/audio/Death.wav')
+        deathSound.volume = 0.4
+        deathSound.loop = false
+        deathSound.play()
+
         clearWallInterval()
         window.clearInterval(scoreInterval)
         return true
@@ -34,7 +37,7 @@ export function update(gridSize) {
 }
 
 //Draw function to draw the snake, food, powerup, and walls, along with the score
-export function draw(gameBoard){
+export function draw(gameBoard) {
     drawSnake(gameBoard)
     drawFood(gameBoard)
     drawPowerup(gameBoard)
@@ -46,6 +49,9 @@ export function draw(gameBoard){
     scoreElement.style.color = "white"
     scoreElement.style.justifySelf = "flex-start"
     scoreElement.style.backgroundColor = "#100F10"
+    scoreElement.style.padding = '15px'
+    scoreElement.style.borderRadius = '15px'
+
     gameScreen.appendChild(scoreElement)
 }
 

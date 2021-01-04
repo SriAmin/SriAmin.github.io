@@ -4,6 +4,8 @@ let newSegments = 0
 let velocity = {x: 0, y: 1}
 let lastVelocity = {x: 0, y:0}
 
+export let score = 0;
+
 //Updates the snake to check if new segments are added and move it based on velocity
 export function update(){
     addSegments();
@@ -42,6 +44,8 @@ export function expandSnake() { newSegments += EXPANSION_RATE; }
 
 //Checks if the head of a snake intersects with its own body
 export function checkSnakeIntersections() { return onSnake(SNAKE_COORDINATES[0], {ignoreHead: true}) }
+
+export function updateScore() { score += 1000 }
 
 //Check if two postions and equal to each other
 function equalPositions(pos1, pos2) { return pos1.x === pos2.x && pos1.y === pos2.y; }

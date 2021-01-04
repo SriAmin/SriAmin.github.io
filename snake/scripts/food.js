@@ -1,4 +1,4 @@
-import {onSnake, expandSnake} from './snake.js'
+import {onSnake, expandSnake, updateScore} from './snake.js'
 import {GRID_SIZE} from './constants.js'
 
 export let foodCoordinates = getRandCoordinates()
@@ -6,6 +6,12 @@ export let foodCoordinates = getRandCoordinates()
 //Updates the food element and see if it intersects with the snake
 export function update(){
     if (onSnake(foodCoordinates)) {
+        const foodSound = new Audio('assets/audio/Food.wav')
+        foodSound.volume = 0.4
+        foodSound.loop = false
+        foodSound.play()
+
+        updateScore()
         expandSnake()
         foodCoordinates = getRandCoordinates()
     }
@@ -28,7 +34,6 @@ export function setNewCoordinates(boundry){
     while(onSnake(newFoodCoordinates)){
         newFoodCoordinates = {x: Math.floor((Math.random() * (GRID_SIZE - boundry))) + boundry, y: Math.floor((Math.random() * (GRID_SIZE - boundry))) + boundry}
     }    
-    console.log(newFoodCoordinates)
     foodCoordinates = newFoodCoordinates
 }
 

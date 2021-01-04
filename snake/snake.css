@@ -11,6 +11,7 @@ body {
 
   #snakeBoard {
     background-color: #100F10;
+    border-radius: 3%;
     width: 100vmin;
     height: 100vmin;
     display: grid;
@@ -19,12 +20,12 @@ body {
   }
 
   .snake {
-    background-color: hsl(200, 100%, 50%);
+    background-color: #00aaff;
     border: .25vmin solid #100F10;
   }
 
   .food {
-    background-color: hsl(50, 100%, 50%);
+    background-color: #ffd500;
     border: .25vmin solid black;
   }
 

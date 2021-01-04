@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./snake.css">
     <script src="./scripts/game.js" defer type="module"></script>
 </head>
 <body>
     <div class="overlay" id="startScreen">
-        <h1>Snake Game</h1>
-        <p>This is a game that plays similar to snake but with a twist</p>
-        <p>The twist being that walls start to enclose on you</p>
-        <p>Grab the power to bring the walls back, but there is a cooldown</p>
-        <p>Balance between getting food while also preventing walls from eliminated you</p>
-        <h3>-- Click anywhere to begin --</h3>
+        <h1 class="display-1">Snake's Wall</h1>
+        <img src="assets/images/logo.png" style="padding: 10px;"/>
+        <p class="lead">This is a game that plays similar to snake but with a twist</p>
+        <p class="lead">The twist being that walls start to enclose on you</p>
+        <p class="lead">Grab the power to bring the walls back, but there is a cooldown</p>
+        <p class="lead">Balance between getting food while also preventing walls from eliminated you</p>
+        <h3 class="display-4" style="padding: 35px;">-- Click anywhere to begin --</h3>
+        <blockquote class="blockquote">
+            <p class="mb-0">Background Music is Gourmet Race from Kirby Super Star, the rest of the effects were made from scratch</p>
+          </blockquote>
     </div>
     <div class="overlay" id="endScreen">
-        <h1>Game Over</h1>
-        <p>This website was purly made in modular vanilla javascript along with html/css</p>
-        <p>Take a look at the source code if your intrested at all</p>
-        <p>Enjoy the game more if you'd like, see how long you can go!</p>
-        <h3>-- Click anywhere to try again and reload the website --</h3>
+        <h1 class="display-1">Game Over</h1>
+        <p class="lead">This website was purly made in modular vanilla javascript along with html/css</p>
+        <p class="lead">Take a look at the source code if your intrested at all</p>
+        <p class="lead">Enjoy the game more if you'd like, see how long you can go!</p>
+        <h4 class="display-5" style="padding: 35px;">-- Click anywhere to try again and reload the website --</h4>
     </div>
     <div class="overlay" id="gameScreen">
         

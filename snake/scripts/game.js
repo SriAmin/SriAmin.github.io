@@ -6,6 +6,11 @@ const startScreen = document.getElementById("startScreen")
 const gameScreen = document.getElementById("gameScreen")
 const endScreen = document.getElementById("endScreen")
 
+const backgroundMusic = new Audio('assets/audio/GourmetRace.mp3')
+backgroundMusic.volume = 0.40;
+backgroundMusic.loop = true
+backgroundMusic.play()
+
 let gameState = 0;
 let lastRenderTime = 0
 
@@ -23,6 +28,11 @@ function update() {
                 startScreen.onclick = null;
                 startScreen.style.display = "none"
                 gameScreen.style.display = "flex"
+
+                const selectSound = new Audio('assets/audio/Select.wav')
+                selectSound.volume = 0.4
+                selectSound.loop = false
+                selectSound.play()
             }
             break;
         //If the game state is the play state
