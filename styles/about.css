@@ -16,7 +16,7 @@
     padding-right: 5vw;
 }
 
-.aboutDescription {
+.description {
     padding-left: 10vw;
     padding-right: 10vw;
     margin-top: 2.5vh;
@@ -54,7 +54,6 @@
 .listItem {
     display: flex;
     width: 21vw;
-    height: 20vh;
     border: 1px solid black;
     padding: 2vh 2vw 2vh 2vw;
 }
@@ -68,7 +67,6 @@
     display: flex;
     margin-right: 2vw;
     width: 4vw;
-    height: 8vh;
     align-self: center;
 
 }
@@ -92,7 +90,6 @@
 @media only screen and (max-width: 1240px) {
     .itemPicture {
         width: calc(5px + 3vw);
-        height: calc(5px + 4vh);
     }
     .listItem {
         display: flex;
@@ -124,7 +121,6 @@
     .itemPicture {
         margin-top: 3vh;
         width: calc(5px + 7vw);
-        height: calc(5px + 4vh);
         margin-right: 6vw;
     }
     

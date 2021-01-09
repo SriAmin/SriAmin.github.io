@@ -29,13 +29,6 @@
     justify-content: center;
 }
 
-.contactDescription {
-    padding-left: 20vw;
-    padding-right: 20vw;
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
-}
-
 .contactForm {
     display: flex;
     align-items: center;
