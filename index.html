@@ -79,7 +79,7 @@
     </section>
     <section id="About">
       <p class="aboutTitle">About Me</p>
-      <p class="aboutDescription">Welcome to my portfolio, a portal to know a little bit about me and the recent projects I've worked on and displayed. It'll also link to my LinkedIn and Github page below. Below is a list of my skills that I believe can make an excellent employee in the workforce.</p>
+      <p class="description">Welcome to my portfolio, a portal to know a little bit about me and the recent projects I've worked on and displayed. It'll also link to my LinkedIn and Github page below. Below is a list of my skills that I believe can make an excellent employee in the workforce.</p>
       <div class="aboutList">
         <div>
           <img src="./images/profileIcon.png" alt="Profile Icon"/>
@@ -163,43 +163,43 @@
             <p class="projectsTitle">Projects</p>
         </div>
         <div class="projectsContainer">
-            <p class="projectsDescription">These are my projects that I have to display, if you are interested to see more from the project, click on the "See More" button to go to a designated link representing the project.</p>
+            <p class="description">These are my projects that I have to display, if you are interested to see more from the project, click on the "See More" button to go to a designated link representing the project.</p>
             <div class="projectCardGroup">
-                <div class="projectCard">
-                    <img src="./images/snakeIcon.png" alt="Snake's Wall Icon" class="cardImage"/>
-                    <div class="cardText">
-                        <p class="cardTitle">Snake's Wall</p>
-                        <p class="cardDescription">
+                <div class="card">
+                    <img src="./images/snakeIcon.png" alt="Snake's Wall Icon" class="card-img-top"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Snake's Wall</h5>
+                        <p class="card-text">
                             A game that plays similar to snake but incorporates walls that encoles
                             on the snake. Using pure modular javascript, HTML/CSS, along with 
                             borrowed background music and sound effects made from scratch, I created
                             an entertaining game with a twist.
                         </p>
-                        <a href="https://github.com/dan032/ParkPal" target="_blank" class="cardBtn">See More</a>
+                        <a href="https://github.com/dan032/ParkPal" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
                     </div>
                 </div>
-                <div class="projectCard">
-                    <img src="./images/auroPayIcon.png" alt="AuroPay Icon" class="cardImage"/>
-                        <div class="cardText">
-                            <p class="cardTitle">AuroPay</p>
-                            <p class="cardDescription">
+                <div class="card">
+                    <img src="./images/auroPayIcon.png" alt="AuroPay Icon" class="card-img-top"/>
+                        <div class="card-body">
+                            <h5 class="card-title">AuroPay</h5>
+                            <p class="card-text">
                                 A React Native Application that allowed people in Auroville, India to send transactions
                                 over their phones rather than having to do tedious paperwork for each transaction as they traditionally did before.
                                 Currently deployed and gathering several positive reviews.
                             </p>
-                            <a href="https://youtu.be/EjgQLgzfLB0" target="_blank" class="cardBtn">See More</a>
+                            <a href="https://youtu.be/EjgQLgzfLB0" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
                         </div>
                     </div>
-                <div class="projectCard">
-                    <img src="./images/crosswordIcon.PNG" alt="Crossword Icon" class="cardImage"/>
-                    <div class="cardText">
-                        <p class="cardTitle">Crossword Project - Harvard's CS50 AI</p>
-                        <p class="cardDescription">
+                <div class="card">
+                    <img src="./images/crosswordIcon.PNG" alt="Crossword Icon" class="card-img-top"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Crossword Project - Harvard's CS50 AI</h5>
+                        <p class="card-text">
                             A Python Program that uses Constraint Statificiation AI to create 
                             a crossword puzzle with the words filled in. This was a project for
                             Harvard University's free online course CS50 Introduction to Artificial Intelligence with Python.
                         </p>
-                        <a href="https://youtu.be/63_u_tJVU3Q" target="_blank" class="cardBtn">See More</a>
+                        <a href="https://youtu.be/63_u_tJVU3Q" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
                     </div>
                 </div>
             </div>
@@ -211,7 +211,7 @@
             <p class="contactsTitle">Contact Me</p>
         </div>
         <div class="contactContainer">
-            <p class="contactDescription">I would love to have a conversation with you, whether that would be over coffee, Zoom, or even over a game of Super Smash Brothers. Below is my contact form. I'll try to reply as soon as possible. I look forward to connecting if you're interested, and if not, I hoped you enjoyed the website and its design. If you have any suggestions to improve the portfolio, please and don't be afraid to send an email with the comment.</p>
+            <p class="description">I would love to have a conversation with you, whether that would be over coffee, Zoom, or even over a game of Super Smash Brothers. Below is my contact form. I'll try to reply as soon as possible. I look forward to connecting if you're interested, and if not, I hoped you enjoyed the website and its design. If you have any suggestions to improve the portfolio, please and don't be afraid to send an email with the comment.</p>
             <form class="contactForm" id="contactForm">
                 <div class="textInputGroup">
                     <input type="text" placeholder="Email" name="email" class="formTextInput"/>
@@ -222,14 +222,14 @@
                     Message:
                 </label>
                 <textarea class="formTextArea" name="message"> </textarea>
-                <a href="" onClick="sendEmail()">Send</a>
+                <a href="" class="btn btn-primary" style="margin-top: 15px; padding-left: 25px; padding-right: 25px;" onClick="sendEmail()">Send</a>
             </form>
         </div>
         </section>
     <footer id="footerContainer">
-        <div className="socialLinkGroup">
-          <a className="socialLink" href="https://github.com/SriAmin" target="_blank" rel="noopener noreferrer"><img src="./images/github.png" alt="gitHub" className="socialIcon"/></a>
-          <a className="socialLink" href="https://www.linkedin.com/in/sri-amin/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedIn.png" alt="linkedIn" className="socialIcon"/></a>
+        <div class="socialLinkGroup">
+          <a class="socialLink" href="https://github.com/SriAmin" target="_blank" rel="noopener noreferrer"><img src="./images/github.png" alt="gitHub" class="socialIcon"/></a>
+          <a class="socialLink" href="https://www.linkedin.com/in/sri-amin/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedIn.png" alt="linkedIn" class="socialIcon"/></a>
         </div>
         <p style="color: #804994; font-style: italic">Want to see more? Take a look at my social media accounts.</p>
     </footer>
