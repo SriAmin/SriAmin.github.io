@@ -1,5 +1,7 @@
+emailjs.init("user_r8pQgRMG3WsTjHjjUKCbr");
+
 function sendEmail(){
-    event.preventDefault();
+    preventDefault();
     var formData = $('form').serializeArray();
     console.log(formData);
 

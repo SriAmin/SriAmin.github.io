@@ -17,6 +17,7 @@
     padding-left: 5vw;
     padding-right: 5vw;
     color: white;
+    font-family: 'Oregano', cursive;
 }
 
 .contactContainer {
@@ -41,7 +42,7 @@
     border: 2px solid rgb(197, 197, 197);
     border-radius: 5px;
     font-size: calc(10px + 0.5vw);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Noto Sans JP', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .formTextInput {

@@ -39,8 +39,8 @@
     font-size: calc(25px + 12.5vmin);
     margin: 0%;
     margin-right: -5vw;
-    font-weight: 600;
     font-style: italic;
+    font-family: 'Oregano', cursive;
 }
 
 #mainTagline {
@@ -54,7 +54,7 @@
     text-align: center;
     font-size: calc(12px + 0.5vmin);
     color: white;
-    font-family: NotoSans;
+    font-weight: 400;
 }
 
 
@@ -74,7 +74,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-    font-family: NotoSans;
 }
 
 @keyframes slideIn {
