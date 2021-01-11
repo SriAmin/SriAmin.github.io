@@ -1,13 +1,17 @@
 .triangleImage {
     width: 0;
     border-top: calc(30vh + 300px) solid #b388eb;
-    border-right: 40vw solid transparent;
-    border-left: 23vw solid #b388eb;
-    margin-top: -30px;
-    animation-name: slideIn;
-    animation-duration: 0.75s;
+    border-right: 35vw solid transparent;
+    border-left: 25vw solid #b388eb;
+    animation-name: slideInTriangle;
+    animation-duration: 1s;
 }
-  
+
+@keyframes slideInTriangle {
+    from {border-left-width: 20vw; border-right-width: 0vw;}
+    to {border-left-width: 25vw; border-right-width: 35vw;}
+}
+
 .mainContent {
     display: flex;
     position: absolute;
@@ -22,7 +26,12 @@
     align-items: center;
     margin-left: 5vw;
     animation-name: profileSlideIn;
-    animation-duration: 0.75s;
+    animation-duration: 1s;
+}
+
+@keyframes profileSlideIn {
+    from {margin-right: 50vw;}
+    to {margin-right: 0vw;}
 }
 
 .headerTitle {
@@ -74,25 +83,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-}
-
-@keyframes slideIn {
-    from {border-left-width: 0vw; border-right-width: 0vw;}
-    to {border-left-width: 23vw; border-right-width: 40vw;}
-}
-
-@keyframes slideInPhone {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes profileSlideIn {
-    from {margin-right: 50vw;}
-    to {margin-right: 0vw;}
 }
 
 @media only screen and (max-width: 766px) {

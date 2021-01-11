@@ -59,6 +59,27 @@
     font-size: 16px;
 }
 
+#card1.is-visable, #card3.is-visable{
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+#card2.is-visable {
+    animation-name: slideIn, fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes slideIn {
+    from {margin-left: 300px; margin-right: 300px;}
+    to {margin-left: 0px; margin-right: 0px;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
 @media only screen and (max-width: 766px) {
     .projectCardGroup {
         flex-direction: column;

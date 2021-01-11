@@ -1,246 +1,276 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta charset="utf-8">'
-    
-    <meta name="viewport" content="width=device-width">
-    
-    <title>Sri's Website</title>
-    
-    <!-- Stylesheets and Scripts for Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <!-- Script for EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    
-    <!-- Stylesheets for seperate parts of the webpage -->
-    <link rel="stylesheet" href="./styles/mainHeader.css">
-    <link rel="stylesheet" href="./styles/about.css">
-    <link rel="stylesheet" href="./styles/projects.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
+  <meta charset="utf-8">
 
-    <!-- Call for Noto Sans JP font family -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
 
-    <!-- Call for Oregano font family -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
-    
-    <!-- Sets the font for the entire webpage along with the background image -->
-    <style>
-        body{
-            background-image: url('./images/background.jpg');
-            background-attachment: fixed;
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-    </style>
-    
-    <script src="main.js" defer type="module"></script>
+  <title>Sri's Website</title>
+
+  <!-- Stylesheets and Scripts for Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- Script for EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
+  <!-- Stylesheets for seperate parts of the webpage -->
+  <link rel="stylesheet" href="./styles/mainHeader.css">
+  <link rel="stylesheet" href="./styles/about.css">
+  <link rel="stylesheet" href="./styles/projects.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <!-- Call for Noto Sans JP font family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Call for Oregano font family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Sets the font for the entire webpage along with the background image -->
+  <style>
+    body {
+      background-image: url('./images/background.jpg');
+      background-attachment: fixed;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+  </style>
+
+  <script src="main.js" defer type="module"></script>
 </head>
+
 <body>
-    <!-- Main Header -->
-    <section id="Main Header">
-        <div class="triangleImage"/>
-        <div class="mainContent">
-            <div class="profile">
-              <img src="images/headshot.jpg" class="headshot" alt="Sri's Headshot"/>
-              <div class="taglines">
-                <div style="margin-bottom: 30px; margin-top: 20px;">
-                  <p>Undergraduate for HBA Mobile Computing</p>
-                  <p>Sheridan College</p>
-                </div>
-                <div>
-                  <p>Burlington, ON</p>
-                  <p>(289) - 838 - 5827</p>
-                  <p>sri.amin@gmail.com</p>
-                  <a href="Resume.pdf" target="_blank" class="resumeBtn">View Resume</a>
-                </div>
-              </div>
-            </div>
-            <div style="padding-right: 25vw"></div>
-            <div class="headerTitle">
-              <p>Welcome to My Portfoilio, I'm</p>
-              <p class="mainHeader">Sri Amin</p>
-            </div>
-      </div>
-    </section>
-    <!-- About Section  -->
-    <section id="About">
-      <p class="aboutTitle">About Me</p>
-      <p class="description">Welcome to my portfolio, a portal to know a little bit about me and the recent projects I've worked on and displayed. It'll also link to my LinkedIn and Github page below. Below is a list of my skills that I believe can make an excellent employee in the workforce.</p>
-      <div class="aboutList">
-        <div>
-          <img src="./images/profileIcon.png" alt="Profile Icon"/>
-        </div>
-        <div class="listPoints">
-          <div class="listPointsSection">
-            <!--About Item 1 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/sheridanLogo.png" alt="SmartPhone Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Mobile Computing Student</p>
-                <p class="itemDesc">Studying for a Bachelor's Degree in Computing Science at Sheridan College. Currently a GPA of 3.81.</p>
-              </div>
-            </div>
-            <!--About Item 2 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/codeIcon.png" alt="Hardvard Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Programming Languages</p>
-                <p class="itemDesc">I have experiences with several programming languages, like Python, C/C++, Javascript, C#, and more.</p>
-              </div>
-            </div>
-            <!--About Item 3 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/designIcon.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Interest in UI</p>
-                <p class="itemDesc">A committed passion for user interface and aiming to learn more and improve UI any way I can.</p>
-              </div>
-            </div>
+  <!-- Main Header -->
+  <section id="Main Header">
+    <div class="triangleImage" />
+    <div class="mainContent">
+      <div class="profile">
+        <img src="images/headshot.jpg" class="headshot" alt="Sri's Headshot" />
+        <div class="taglines">
+          <div style="margin-bottom: 30px; margin-top: 20px;">
+            <p>Undergraduate for HBA Mobile Computing</p>
+            <p>Sheridan College</p>
           </div>
-          <div class="listPointsSection">
-            <!--About Item 4 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/dataLogo.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Data Structures & Algorithms</p>
-                <p class="itemDesc">Have an understanding of commonly used data structures and algorithms.</p>
-              </div>
-            </div>
-            <!--About Item 5 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/serverIcon.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Networking & OS</p>
-                <p class="itemDesc">Fundamental knowledge of networking and operating systems principles.</p>
-              </div>
-            </div>
-            <!--About Item 6 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/groupsIcon.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Collaborative</p>
-                <p class="itemDesc">I've worked with several teams and gained collaboration skills and a strong personality.</p>
-              </div>
-            </div>
-          </div>
-          <div class="listPointsSection">
-            <!--About Item 7 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/motivatedIcon.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Determined & Motivated</p>
-                <p class="itemDesc">I'm very determined to continue learning new areas of computer science while staying motivated.</p>
-              </div>
-            </div>
-            <!--About Item 8 -->
-            <div class="listItem">
-              <img src="./images/aboutIcons/flexibleIcon.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Flexible & Easy Going</p>
-                <p class="itemDesc">I'm quite flexible with my work and very easy going when it comes to approaching me.</p>
-              </div>
-            </div>
-            <!--About Item 9 -->
-            <div class="listItem lastItem">
-              <img src="./images/aboutIcons/hobbiesIcon.png" alt="Gear Icon" class="itemPicture"/>
-              <div class="textContent">
-                <p class="itemTitle">Hobbies</p>
-                <p class="itemDesc">In my past time, I like to edit videos, play games like Super Smash Brothers or even board games like Catan.</p>
-              </div>
-            </div>
+          <div>
+            <p>Burlington, ON</p>
+            <p>(289) - 838 - 5827</p>
+            <p>sri.amin@gmail.com</p>
+            <a href="Resume.pdf" target="_blank" class="resumeBtn">View Resume</a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="Projects">
-        <div class="projectShader">
-            <img src="./images/projectIcon.png" alt="Project Icon" class="projectIcon" />
-            <p class="projectsTitle">Projects</p>
-        </div>
-        <div class="projectsContainer">
-            <p class="description">These are my projects that I have to display, these are an enculmenation of my past experiences, ranging from modular javascript to artifical Intelligence. If you are interested to see more from the project, click on the "See More" button to go to a designated link representing the project.</p>
-            <div class="projectCardGroup">
-                <!-- Project Card 1 -->
-                <div class="card">
-                    <img src="./images/snakeIcon.png" alt="Snake's Wall Icon" class="card-img-top"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Snake's Wall</h5>
-                        <p class="card-text">
-                            A game that plays similar to snake but incorporates walls that encoles
-                            on the snake. Using pure modular javascript, HTML/CSS, along with 
-                            borrowed background music and sound effects made from scratch, I created
-                            an entertaining game with a twist.
-                        </p>
-                        <a href="https://github.com/dan032/ParkPal" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="card">
-                    <img src="./images/auroPayIcon.png" alt="AuroPay Icon" class="card-img-top"/>
-                        <div class="card-body">
-                            <h5 class="card-title">AuroPay</h5>
-                            <p class="card-text">
-                                A React Native Application that allowed people in Auroville, India to send transactions
-                                over their phones rather than having to do tedious paperwork for each transaction as they traditionally did before.
-                                Currently deployed and gathering several positive reviews.
-                            </p>
-                            <a href="https://youtu.be/EjgQLgzfLB0" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
-                        </div>
-                    </div>
-                <!-- Project Card 3 -->
-                <div class="card">
-                    <img src="./images/crosswordIcon.PNG" alt="Crossword Icon" class="card-img-top"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Crossword Project - Harvard's CS50 AI</h5>
-                        <p class="card-text">
-                            A Python Program that uses Constraint Statificiation AI to create 
-                            a crossword puzzle with the words filled in. This was a project for
-                            Harvard University's free online course CS50 Introduction to Artificial Intelligence with Python.
-                        </p>
-                        <a href="https://youtu.be/63_u_tJVU3Q" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
-                    </div>
-                </div>
+      <div style="padding-right: 25vw"></div>
+      <div class="headerTitle">
+        <p>Welcome to My Portfoilio, I'm</p>
+        <p class="mainHeader">Sri Amin</p>
+      </div>
+    </div>
+  </section>
+  <!-- About Section  -->
+  <section id="About">
+    <p class="aboutTitle">About Me</p>
+    <p class="description">Welcome to my portfolio, a portal to know a little bit about me and the recent projects I've
+      worked on and displayed. It'll also link to my LinkedIn and Github page below. Below is a list of my skills that I
+      believe can make an excellent employee in the workforce.</p>
+    <div class="aboutList">
+      <div>
+        <img src="./images/profileIcon.png" alt="Profile Icon" />
+      </div>
+      <div class="listPoints">
+        <div class="listPointsSection">
+          <!--About Item 1 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/sheridanLogo.png" alt="SmartPhone Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Mobile Computing Student</p>
+              <p class="itemDesc">Studying for a Bachelor's Degree in Computing Science at Sheridan College. Currently a
+                GPA of 3.81.</p>
             </div>
+          </div>
+          <!--About Item 2 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/codeIcon.png" alt="Hardvard Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Programming Languages</p>
+              <p class="itemDesc">I have experiences with several programming languages, like Python, C/C++, Javascript,
+                C#, and more.</p>
+            </div>
+          </div>
+          <!--About Item 3 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/designIcon.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Interest in UI</p>
+              <p class="itemDesc">A committed passion for user interface and aiming to learn more and improve UI any way
+                I can.</p>
+            </div>
+          </div>
         </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="Contacts">
-        <div class="contactShader">
-            <img src="./images/mailIcon.png" alt="Mail Icon" class="mailIcon" />
-            <p class="contactsTitle">Contact Me</p>
+        <div class="listPointsSection">
+          <!--About Item 4 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/dataLogo.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Data Structures & Algorithms</p>
+              <p class="itemDesc">Have an understanding of commonly used data structures and algorithms.</p>
+            </div>
+          </div>
+          <!--About Item 5 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/serverIcon.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Networking & OS</p>
+              <p class="itemDesc">Fundamental knowledge of networking and operating systems principles.</p>
+            </div>
+          </div>
+          <!--About Item 6 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/groupsIcon.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Collaborative</p>
+              <p class="itemDesc">I've worked with several teams and gained collaboration skills and a strong
+                personality.</p>
+            </div>
+          </div>
         </div>
-        <div class="contactContainer">
-            <p class="description">I would love to have a conversation with you, whether that would be over coffee, Zoom, or even over a game of Super Smash Brothers. Below is my contact form. I'll try to reply as soon as possible. I look forward to connecting if you're interested, and if not, I hoped you enjoyed the website and its design. If you have any suggestions to improve the portfolio, please and don't be afraid to send an email with the comment.</p>
-            <!-- Form to send email message -->
-            <form class="contactForm" id="contactForm">
-                <div class="textInputGroup">
-                    <input type="text" placeholder="Email" name="email" class="formTextInput"/>
-                    <input type="text" placeholder="Name" name="name" class="formTextInput"/>
-                </div>
-                <input type="text" placeholder="Subject" name="subject" class="formTextInput"/>
-                <label style="margin-top: 50px; font-size: 22; margin-bottom: 15;">
-                    Message:
-                </label>
-                <textarea class="formTextArea" name="message"> </textarea>
-                <a href="" class="btn btn-primary" style="margin-top: 15px; padding-left: 25px; padding-right: 25px;" onClick="sendEmail()">Send</a>
-            </form>
+        <div class="listPointsSection">
+          <!--About Item 7 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/motivatedIcon.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Determined & Motivated</p>
+              <p class="itemDesc">I'm very determined to continue learning new areas of computer science while staying
+                motivated.</p>
+            </div>
+          </div>
+          <!--About Item 8 -->
+          <div class="listItem">
+            <img src="./images/aboutIcons/flexibleIcon.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Flexible & Easy Going</p>
+              <p class="itemDesc">I'm quite flexible with my work and very easy going when it comes to approaching me.
+              </p>
+            </div>
+          </div>
+          <!--About Item 9 -->
+          <div class="listItem lastItem">
+            <img src="./images/aboutIcons/hobbiesIcon.png" alt="Gear Icon" class="itemPicture" />
+            <div class="textContent">
+              <p class="itemTitle">Hobbies</p>
+              <p class="itemDesc">In my past time, I like to edit videos, play games like Super Smash Brothers or even
+                board games like Catan.</p>
+            </div>
+          </div>
         </div>
-        </section>
-    <!-- Footer Section -->
-    <footer id="footerContainer">
-        <div class="socialLinkGroup">
-          <a class="socialLink" href="https://github.com/SriAmin" target="_blank" rel="noopener noreferrer"><img src="./images/github.png" alt="gitHub" class="socialIcon"/></a>
-          <a class="socialLink" href="https://www.linkedin.com/in/sri-amin/" target="_blank" rel="noopener noreferrer"><img src="./images/linkedIn.png" alt="linkedIn" class="socialIcon"/></a>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Section -->
+  <section id="Projects">
+    <div class="projectShader">
+      <img src="./images/projectIcon.png" alt="Project Icon" class="projectIcon" />
+      <p class="projectsTitle">Projects</p>
+    </div>
+    <div class="projectsContainer">
+      <p class="description">These are my projects that I have to display, these are an enculmenation of my past
+        experiences, ranging from modular javascript to artifical Intelligence. If you are interested to see more from
+        the project, click on the "See More" button to go to a designated link representing the project.</p>
+      <div class="projectCardGroup">
+        <!-- Project Card 1 -->
+        <div class="card animate-on-scroll" id="card1">
+          <img src="./images/snakeIcon.png" alt="Snake's Wall Icon" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Snake's Wall</h5>
+            <p class="card-text">
+              A game that plays similar to snake but incorporates walls that encoles
+              on the snake. Using pure modular javascript, HTML/CSS, along with
+              borrowed background music and sound effects made from scratch, I created
+              an entertaining game with a twist.
+            </p>
+            <a href="https://github.com/dan032/ParkPal" target="_blank" class="btn btn-primary btn-lg btn-block">See
+              More</a>
+          </div>
         </div>
-        <p style="color: #804994; font-style: italic">Want to see more? Take a look at my social media accounts.</p>
-    </footer>
+        <!-- Project Card 2 -->
+        <div class="card animate-on-scroll" id="card2">
+          <img src="./images/auroPayIcon.png" alt="AuroPay Icon" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">AuroPay</h5>
+            <p class="card-text">
+              A React Native Application that allowed people in Auroville, India to send transactions
+              over their phones rather than having to do tedious paperwork for each transaction as they traditionally
+              did before.
+              Currently deployed and gathering several positive reviews.
+            </p>
+            <a href="https://youtu.be/EjgQLgzfLB0" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="card animate-on-scroll" id="card3">
+          <img src="./images/crosswordIcon.PNG" alt="Crossword Icon" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Crossword Project - Harvard's CS50 AI</h5>
+            <p class="card-text">
+              A Python Program that uses Constraint Statificiation AI to create
+              a crossword puzzle with the words filled in. This was a project for
+              Harvard University's free online course CS50 Introduction to Artificial Intelligence with Python.
+            </p>
+            <a href="https://youtu.be/63_u_tJVU3Q" target="_blank" class="btn btn-primary btn-lg btn-block">See More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="Contacts">
+    <div class="contactShader">
+      <img src="./images/mailIcon.png" alt="Mail Icon" class="mailIcon" />
+      <p class="contactsTitle">Contact Me</p>
+    </div>
+    <div class="contactContainer">
+      <p class="description">I would love to have a conversation with you, whether that would be over coffee, Zoom, or
+        even over a game of Super Smash Brothers. Below is my contact form. I'll try to reply as soon as possible. I
+        look forward to connecting if you're interested, and if not, I hoped you enjoyed the website and its design. If
+        you have any suggestions to improve the portfolio, please and don't be afraid to send an email with the comment.
+      </p>
+      <!-- Form to send email message -->
+      <form class="contactForm" id="contactForm">
+        <div class="textInputGroup">
+          <input type="text" placeholder="Email" name="email" class="formTextInput animate-on-scroll" />
+          <input type="text" placeholder="Name" name="name" class="formTextInput animate-on-scroll" />
+        </div>
+        <input type="text" placeholder="Subject" name="subject" class="subjectFormInput animate-on-scroll" />
+        <label style="margin-top: 50px; font-size: 22; margin-bottom: 15;">
+          Message:
+        </label>
+        <textarea class="formTextArea animate-on-scroll" name="message"> </textarea>
+        <a href="" class="btn btn-primary" style="margin-top: 15px; padding-left: 25px; padding-right: 25px;"
+          id="contactButton">Send</a>
+      </form>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer id="footerContainer">
+    <div class="socialLinkGroup">
+      <a class="socialLink" href="https://github.com/SriAmin" target="_blank" rel="noopener noreferrer"><img
+          src="./images/github.png" alt="gitHub" class="socialIcon animate-on-scroll" /></a>
+      <a class="socialLink" href="https://www.linkedin.com/in/sri-amin/" target="_blank" rel="noopener noreferrer"><img
+          src="./images/linkedIn.png" alt="linkedIn" class="socialIcon animate-on-scroll" /></a>
+    </div>
+    <p style="color: #804994; font-style: italic">Want to see more? Take a look at my social media accounts.</p>
+  </footer>
 </body>
+
 </html>

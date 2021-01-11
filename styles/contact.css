@@ -45,8 +45,18 @@
     font-family: 'Noto Sans JP', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.formTextArea.is-visable {
+    animation-name: slideOutTextArea;
+    animation-duration: 2s;
+}
+
+@keyframes slideOutTextArea {
+    from {width: 0vw;}
+    to {width: 30vw;}
+}
+
 .formTextInput {
-    width: 28vw;
+    width: 14vw;
     margin-top: 3vh;
     font-size: calc(15px + 0.25vw);
     border-radius: 4px;
@@ -54,6 +64,37 @@
     border-bottom: 2px solid #b388eb;
     padding-left: 2vw;
 }
+
+.subjectFormInput {
+    width: 28vw;
+    margin-top: 3vh;
+    font-size: calc(15px + 0.25vw);
+    border-radius: 4px;
+    border: 0;
+    border-bottom: 2px solid #b388eb;
+    padding-left: 2vw;    
+}
+
+.formTextInput.is-visable{
+    animation-name: slideOut;
+    animation-duration: 2s;
+}
+
+.subjectFormInput.is-visable {
+    animation-name: slideOutSubject;
+    animation-duration: 2s;
+}
+
+@keyframes slideOut {
+    from {width: 0vw;}
+    to {width: 13vw;}
+}
+
+@keyframes slideOutSubject {
+    from {width: 0vw;}
+    to {width: 28vw;}
+}
+
 
 .textInputGroup .formTextInput{
     width: 13vw;
@@ -81,6 +122,7 @@
     color: white;
     transition: 0.25s;
 }
+
 
 @media only screen and (max-width: 1240px) {
     .formTextInput {

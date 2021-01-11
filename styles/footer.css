@@ -19,3 +19,13 @@
     padding-right: 1.5vw;
     transition: 0.5s;
 }
+
+.socialIcon.is-visable {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
