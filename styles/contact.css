@@ -125,14 +125,7 @@
 
 
 @media only screen and (max-width: 1240px) {
-    .formTextInput {
-        width: 80vw;    
-    }
-    .textInputGroup .formTextInput {
-        width: 38vw;
-    }
     .formTextArea {
-        width: 80vw;
         padding: 2.5vw;
         box-sizing: border-box;
     }
