@@ -11,19 +11,12 @@
     <!-- Sets the font for the entire webpage along with the background image -->
     <style>
       body {
-        background-image: url('./images/background.jpg');
+        background-image: url('./images/background.webp');
         background-attachment: fixed;
         font-family: 'Noto Sans JP', sans-serif;
       }
     </style>
 
-  <!-- Stylesheets for Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" media="screen">
-
-  <!-- Call for Oregano font family -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet" media="screen">
 
   <!-- StyleSheets for Computer Screens -->
   <link rel="stylesheet" href="./styles/mainHeader.css" media="screen">
@@ -31,6 +24,19 @@
   <link rel="stylesheet" href="./styles/projects.css" media="screen">
   <link rel="stylesheet" href="./styles/contact.css" media="screen">
   <link rel="stylesheet" href="./styles/footer.css" media="screen">
+
+  <!-- Scripts for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous" defer></script>
+
+  <!-- Stylesheets for Bootstrap -->
+  <link rel="stylesheet" rel="noreferrer" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" media="screen">
+
+  <!-- Call for Oregano font family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet" media="screen">
 </head>
 
 <body>
@@ -39,7 +45,7 @@
     <div class="triangleImage" />
     <div class="mainContent">
       <div class="profile">
-        <img src="images/headshot.jpg" class="headshot" alt="Sri's Headshot" />
+        <img src="images/headshot.webp" class="headshot" alt="Sri's Headshot" />
         <div class="taglines">
           <div style="margin-bottom: 30px; margin-top: 20px;">
             <p>Undergraduate for HBA Mobile Computing</p>
@@ -187,7 +193,7 @@
         </div>
         <!-- Project Card 2 -->
         <div class="card animate-on-scroll" id="card2">
-          <img src="./images/auroPayIcon.png" alt="AuroPay Icon" class="card-img-top" />
+          <img src="./images/auroPayIcon.webp" alt="AuroPay Icon" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">AuroPay</h5>
             <p class="card-text">
@@ -201,7 +207,7 @@
         </div>
         <!-- Project Card 3 -->
         <div class="card animate-on-scroll" id="card3">
-          <img src="./images/crosswordIcon.PNG" alt="Crossword Icon" class="card-img-top" />
+          <img src="./images/crosswordIcon.webp" alt="Crossword Icon" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Crossword Project - Harvard's CS50 AI</h5>
             <p class="card-text">
@@ -253,23 +259,11 @@
     </div>
     <p style="color: #804994; font-style: italic">Want to see more? Take a look at my social media accounts.</p>
   </footer>
+  <!-- Scripts for EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js" async></script>
 
   <!-- Main Script for the Portfolio -->
   <script src="main.js" defer type="module" async></script>
-
-  <!-- Scripts for Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-  crossorigin="anonymous" async></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-  crossorigin="anonymous" async></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-  crossorigin="anonymous" async></script>
-
-<!-- Scripts for EmailJS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js" async></script>
 
 </body>
 
