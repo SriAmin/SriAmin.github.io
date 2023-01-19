@@ -1,0 +1,477 @@
+body {
+    background-color: #121418;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: #b08cfc70;
+    border-radius: 9999px;
+    
+  }
+
+.navigator {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    border-bottom: 2px solid #b08cfc70;
+}
+
+.navigator * {
+    font-size: medium;
+    color: #AF8CFC;
+    padding: 2% 2.5% 1% 2.5%;
+}
+
+#header {
+    display: flex;
+    background-color: #181B20;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0vh 0vw 0vh 3vw;
+}
+
+#header p {
+    color: rgb(223, 223, 223);
+}
+
+#header-desc {
+    width: 90%;
+}
+
+#header a {
+    color: #AF8CFC;
+    text-decoration: none;
+}
+
+#cover {
+    width: 55vw;
+}
+
+/* If the screen size is 601px wide or more */
+@media screen and (min-width: 601px) {
+    #header p {
+        font-size: 2vw;
+    }
+
+    #header-desc p {
+        font-size: 1.15vw;
+        color: rgb(173, 173, 173);
+    }
+
+    #header a {
+        font-size: 1.3vw;
+    }
+}
+
+/* If the screen size is 600px wide or less*/
+@media screen and (max-width: 600px) {
+    #header p {
+        font-size: 50px;
+    }
+
+    #header-desc p {
+        font-size: 10px;
+        color: rgb(173, 173, 173);
+    }
+
+    #header a {
+        font-size: 10px;
+    }
+}
+
+#skills-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0vh 17vw 0vh 17vw;
+}
+
+#skills-nav * {
+    font-size: 30px;
+    margin-top: 3vh;
+    color: rgb(218, 218, 218);
+    padding: 0px 4vw 0px 4vw;
+}
+
+#skills-content {
+    display: flex;
+    justify-content: center;
+    padding: 0vh 17vw 0vh 17vw;
+    color: whitesmoke;
+}
+
+#skills {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    background-color: #121418;
+}
+
+
+.skills-nav {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: #1b1e24;
+}
+
+.skills-nav .skill-bar-item {
+    padding: 15px 30px;
+    font-size: 30px;
+    float: left;
+    width: 35%;
+    border: none;
+    display: block;
+    outline: 0;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: #1b1e24;
+}
+
+.skill-container ul {
+    list-style-image: url("assets/listMarker.png");
+}
+
+.skill-container li {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.language-icon {
+    width: 25px;
+    margin-left: 10px;
+}
+
+
+.selected {
+    background-color: #b08cfc70 !important;
+}
+
+.skill-container:after,
+.skill-container:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.skill-container {
+    width: 75%;
+    background-color: #1b1e24;
+    padding: 0.01em 16px;
+    height: 50vh;
+}
+
+.skill-border {
+    border: 3px solid #b08cfc70 !important;
+}
+
+.skill-title {
+    color: whitesmoke;
+}
+
+.skill-container p {
+    color: whitesmoke;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
+.openSkill * {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-group {
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 0px 0px #AF8CFC;}
+    to {box-shadow: 0 0 35px 5px #AF8CFC;}
+}
+
+@keyframes spacerZoomIn {
+    from { margin: 0px 300px}
+    to {margin: 0px;}
+}
+
+.spacer {
+    margin: 0px 300px;
+}
+
+.shrink {
+    animation: spacerZoomIn 1.5s;
+    margin: 0px;
+}
+
+.project-card {
+    margin: 0px 25px;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 500px;
+    border-radius: 5px;
+    background-color: white;
+    border: 3px solid #b08cfc;
+    box-shadow: 0 0 0px 0px #AF8CFC;
+    transition: box-shadow 0.25s ease, opacity 1.5s ease;
+    opacity: 0;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 35px 5px #AF8CFC;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.project-card img {
+    width: 100%;
+    border-bottom: 3px solid #b08cfc;
+}
+
+.project-card h1 {
+    padding-left: 5px;
+}
+
+.project-card p {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.project-expanded {
+    height: 75%;
+    width: 75%;
+    background-color: white;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/* The Modal (background) */
+.projectModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #222222;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+}
+
+.modal-fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.25s;
+}
+
+.modal-content * {
+    color: whitesmoke;
+}
+
+.modal-content img {
+    width: 30vw;
+}
+
+.modal-content p {
+    color: whitesmoke;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.project-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-cover {
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    position: absolute;
+}
+
+.project-cover:hover {
+    opacity: 0.5;
+}
+
+.project-git, .project-web, .project-youtube{
+    margin: 15px;
+    background-color: #b08cfc;
+    width: 75px;
+    border-radius: 100%;
+}
+
+.project-git img, .project-web img, .project-youtube img {
+    width: 75px !important;
+}
+
+.project-desc {
+    flex: 1.25;
+    border-left: 3px solid #b08cfc;
+    margin-left: 10px;
+}
+
+.project-desc * {
+    margin-left: 10px;
+}
+
+.project-desc p {
+    font-size: 16px;
+}
+
+.project-desc b {
+    color: #b08cfc;
+}
+
+.project-desc td:not(.softskill-header) {
+    font-size: 14px;
+    padding: 2px 8px;
+}
+
+.softskill-header {
+    color: #b08cfc;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.project-list {
+    font-size: 14px;
+}
+.project-list * {
+    margin: 8px 0px;
+}
+
+/* The Close Button */
+.close {
+    color: #b08cfc;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 5px;
+    z-index:3;
+    text-shadow: 1px 1px #222222;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    position: relative;
+    font-size: 20px;
+    color:#AF8CFC;
+    border: 2px solid #AF8CFC;
+    background: transparent;
+    margin: 0 20px;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    transition: 0.4s all ease-in-out 0s;
+}
+
+.btn:hover {
+    color: black;
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #AF8CFC;
+    transition: 0.4s all ease-in-out 0s;
+
+}
+
+.btn-3::before {
+    left: unset;
+    right: 0;
+    width: 0;
+}
+
+.btn-3:hover::before {
+    right: unset;
+    left: 0;
+    width: 100%;
+}
+
+.contact-img {
+    width: 50px;
+    border-left: 2px solid #AF8CFC;
+    margin-left: 5px;
+    padding-left: 15px;
+}
