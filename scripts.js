@@ -1,3 +1,7 @@
+if (window.outerWidth <= 600) {
+  document.getElementById("cover").src = "assets/SriPortfolioShort.png"
+}
+
 function openSkill(evt, skillName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("active-skill");
