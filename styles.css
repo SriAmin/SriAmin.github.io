@@ -360,10 +360,7 @@ body {
     transition: opacity 0.5s ease;
     z-index: 2;
     position: absolute;
-}
-
-.project-cover:hover {
-    opacity: 0.5;
+    cursor: pointer;
 }
 
 .project-git, .project-web, .project-youtube{
@@ -415,14 +412,17 @@ body {
 
 /* The Close Button */
 .close {
-    color: #b08cfc;
     float: left;
-    font-size: 28px;
-    font-weight: bold;
     position: absolute;
     margin-left: 5px;
+    margin-top: 5px;
     z-index:3;
-    text-shadow: 1px 1px #222222;
+}
+
+.close img {
+    width: 40px;
+    border: 5px solid whitesmoke;
+    border-radius: 100%;
 }
 
 .close:hover,

@@ -28,7 +28,6 @@ var btn = document.getElementById("myBtn");
 var spans = document.getElementsByClassName("close");
 
 function openModal(projectId) {
-  console.log("Hello");
   modal = document.getElementById(projectId)
   modal.style.display = "block";
 }
@@ -77,3 +76,14 @@ window.addEventListener("load", (event) => {
     intersectionObserver.observe(obj);
   });
 });
+
+var projectCover = document.getElementsByClassName("project-cover");
+
+
+for (var i = 0; i < projectCover.length; i++) {
+  var element = projectCover[i];
+
+  element.onclick = function (event) {
+    event.target.style.opacity = (event.target.style.opacity == 1.0) ? 0.0 : 1.0;
+  }
+}
