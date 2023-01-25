@@ -1,5 +1,6 @@
 body {
     background-color: #121418;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -53,8 +54,20 @@ body {
     text-decoration: none;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
 #cover {
+    animation: fadeIn 2s ease-in-out;
     width: 55vw;
+    position: sticky;
 }
 
 /* If the screen size is 601px wide or more */
@@ -95,6 +108,7 @@ body {
 }
 
 #skills {
+    animation: fadeIn 0.75s ease-in;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -159,7 +173,7 @@ body {
     width: 75%;
     background-color: #1b1e24;
     padding: 0.01em 16px;
-    height: 45vh;
+    height: 50vh;
 }
 
 /* If the screen size is 601px wide or more */
@@ -184,16 +198,6 @@ body {
     color: whitesmoke;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
-
-@keyframes fadeOut {
-    from { opacity: 1;}
-    to { opacity: 0;}
-}
-
 .openSkill * {
     animation-name: fadeIn;
     animation-duration: 0.5s;
@@ -210,10 +214,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-}
-
-.first-group {
-    margin-right: 150px;
 }
 
 @keyframes glow {
@@ -250,6 +250,7 @@ body {
 
 .project-card:hover {
     box-shadow: 0 0 35px 5px #AF8CFC;
+    cursor: pointer;
 }
 
 .fadeIn {
@@ -267,7 +268,7 @@ body {
 
 .project-card p {
     font-size: 1vw;
-    padding: 10px;
+    padding: 20px;
 }
 
 .project-expanded {
@@ -423,11 +424,13 @@ body {
     width: 40px;
     border: 5px solid whitesmoke;
     border-radius: 100%;
+    transition: all 0.25s ease-in-out;
 }
 
-.close:hover,
-.close:focus {
+.close img:hover,
+.close img:focus {
     color: #000;
+    border-color: #121418;
     text-decoration: none;
     cursor: pointer;
 }
@@ -447,7 +450,7 @@ body {
 }
 
 .btn:hover {
-    color: black;
+    color: white;
 }
 
 .btn::before {
@@ -473,6 +476,7 @@ body {
     right: unset;
     left: 0;
     width: 100%;
+    border-radius: 5px;
 }
 
 .contact-img {

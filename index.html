@@ -5,113 +5,157 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, intial-scale=1.0">
-  
+
   <title>Sri's Portfolio</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
   <link href="styles.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <!-- Scripts for Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"
     defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
   <div class="navigator">
-    <a href="index.html#skills" style="text-decoration: none;"><h4>Skills</h4></a>
-    <a href="index.html#projects" style="text-decoration: none;"><h4>Projects</h4></a>
-    <a href="index.html#contact" style="text-decoration: none;"><h4>Contact</h4></a>
+    <a href="index.html#skills" style="text-decoration: none;">
+      <h4>Skills</h4>
+    </a>
+    <a href="index.html#projects" style="text-decoration: none;">
+      <h4>Projects</h4>
+    </a>
+    <a href="index.html#contact" style="text-decoration: none;">
+      <h4>Contact</h4>
+    </a>
   </div>
 
   <div id="header">
     <div class="header-content">
-      <p>Sri Amin</p>
+      <p style="font-family: 'Poppins', 'Courier New', Courier, monospace; font-weight: 600;">Sri Amin</p>
       <div id="header-desc">
         <p>Computer Science gradaute seeking an oppourtunity to learn more technologies and platforms that I can apply
           to build grand applications </p>
       </div>
       <a href="Resume.pdf" target="_blank" ">View Resume ></a>
-      </div>
-      <div>
-        <img  src="assets/SriPortfolio.png" id="cover" />
+    </div>
+    <div class=" animate__animated animate__slideInRight">
+        <img src="assets/SriPortfolio.png" id="cover" />
     </div>
   </div>
 
   <div id="skills">
     <div class="skills-nav">
-      <button class="skill-bar-item tablink selected" onclick="openSkill(event,'Languages')"><p class="nav-button-text">Languages</p></button>
-      <button class="skill-bar-item tablink" onclick="openSkill(event,'Technologies')"><p class="nav-button-text">Technologies</p></button>
-      <button class="skill-bar-item tablink" onclick="openSkill(event,'Soft Skills')"><p class="nav-button-text">Soft Skills</p></button>
+      <button class="skill-bar-item tablink selected" onclick="openSkill(event,'Languages')">
+        <p class="nav-button-text">Languages</p>
+      </button>
+      <button class="skill-bar-item tablink" onclick="openSkill(event,'Technologies')">
+        <p class="nav-button-text">Technologies</p>
+      </button>
+      <button class="skill-bar-item tablink" onclick="openSkill(event,'Soft Skills')">
+        <p class="nav-button-text">Soft Skills</p>
+      </button>
     </div>
 
     <div id="Languages" class="skill-container skill-border active-skill">
-        <h2 class="skill-title">Languages</h2>
-        <p>Here are the languages that I've been working with during my career. I've gained experience through studies and outside of school during my free time. The projects listed below relied on some of these languages!</p>
-        <div class="grid">
-          <ul class="g-col-6" style="color: whitesmoke;">
-            <li>Java <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" class="language-icon"/></li>
-            <li>JavaScript (ES6+) <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="language-icon"/></li>
-            <li>HTML <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="language-icon"/></li>
-            <li>CSS <img src="https://icon-library.com/images/css3-icon/css3-icon-28.jpg" class="language-icon"/></li>
-            <li>C++ <img src="https://user-images.githubusercontent.com/42747200/46140125-da084900-c26d-11e8-8ea7-c45ae6306309.png" class="language-icon"/></li>
-          </ul>
-          <ul class="g-col-6" style="color: whitesmoke;">
-            <li>C <img src="https://img.icons8.com/color/480/c-programming.png" class="language-icon"/></li>
-            <li>C# <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/c-sharp-programming-language-icon.png" class="language-icon"/></li>
-            <li>Objective C <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/1200px-Apple_logo_white.svg.png" class="language-icon"/></li>
-            <li>Python <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/768px-Python.svg.png" class="language-icon"/></li>
-            <li>Swift <img src="https://cdn-icons-png.flaticon.com/512/5968/5968371.png" class="language-icon"/></li>
-          </ul>
-        </div>
+      <h2 class="skill-title">Languages</h2>
+      <p>Here are the languages that I've been working with during my career. I've gained experience through studies and
+        outside of school during my free time. The projects listed below relied on some of these languages!</p>
+      <div class="grid">
+        <ul class="g-col-6" style="color: whitesmoke;">
+          <li>Java <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" class="language-icon" /></li>
+          <li>JavaScript (ES6+) <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+              class="language-icon" /></li>
+          <li>HTML <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="language-icon" /></li>
+          <li>CSS <img src="https://icon-library.com/images/css3-icon/css3-icon-28.jpg" class="language-icon" /></li>
+          <li>C++ <img
+              src="https://user-images.githubusercontent.com/42747200/46140125-da084900-c26d-11e8-8ea7-c45ae6306309.png"
+              class="language-icon" /></li>
+        </ul>
+        <ul class="g-col-6" style="color: whitesmoke;">
+          <li>C <img src="https://img.icons8.com/color/480/c-programming.png" class="language-icon" /></li>
+          <li>C# <img
+              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/c-sharp-programming-language-icon.png"
+              class="language-icon" /></li>
+          <li>Objective C <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/1200px-Apple_logo_white.svg.png"
+              class="language-icon" /></li>
+          <li>Python <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/768px-Python.svg.png"
+              class="language-icon" /></li>
+          <li>Swift <img src="https://cdn-icons-png.flaticon.com/512/5968/5968371.png" class="language-icon" /></li>
+        </ul>
+      </div>
     </div>
 
     <div id="Technologies" class="skill-container skill-border active-skill" style="display:none">
       <h2 class="skill-title">Technologies</h2>
-      <p>These are some of the technologies and platforms I used to develop with throughout my career. These tools allowed me to create breathtaking applications that provide features ranging from VR applications to cross-platform mobile applications.</p>
-        <div class="grid">
-          <ul class="g-col-6" style="color: whitesmoke;">
-            <li>iOS <img src="https://www.freeiconspng.com/thumbs/ios-png/os7-style-metro-ui-icon-19.png" class="language-icon"/></li>
-            <li>Android<img src="https://cdn-icons-png.flaticon.com/512/174/174836.png" class="language-icon"/></li>
-            <li>Linux <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" class="language-icon"/></li>
-            <li>Unity <img src="https://preview.redd.it/tu3gt6ysfxq71.png?auto=webp&s=10ab55d9dc09e7ed6ea59bd5916800a5272d5969" class="language-icon"/></li>
-            <li>Unreal <img src="https://uploads-ssl.webflow.com/5f68d1cc3287732f65cabcfb/5f7bb1a87071da59085eab5a_UNREAL_WHT.png" class="language-icon"/></li>
-            <li>Artificial Intelligence <img src="https://icon-library.com/images/machine-learning-icon/machine-learning-icon-28.jpg" class="language-icon"/></li>
-            <li>.NET <img src="https://iconape.com/wp-content/png_logo_vector/microsoft-net-framework-logo.png" class="language-icon"/></li>
-            <li>Virtual Reality Development <img src="https://www.ceekvr.com/static/assets/images/vr-glasses-home.png" class="language-icon"/></li>
-          </ul>
-          <ul class="g-col-6" style="color: whitesmoke;">
-            <li>XCode <img src="https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons/images/app-icon-realistic-materials_2x.png" class="language-icon"/></li>
-            <li>Android Studio <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/1200px-Android_Studio_Icon_%282014-2019%29.svg.png" class="language-icon"/></li>
-            <li>React Native <img src="https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png" class="language-icon"/></li>
-            <li>React <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" class="language-icon"/></li>
-            <li>Git <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" class="language-icon"/></li>
-            <li>JIRA <img src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png" class="language-icon"/></li>
-            <li>NodeJS <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" class="language-icon"/></li>
-            <li>Augmented Reality Development <img src="https://russia-promo.com/uploads/images/ar-icon.png" class="language-icon"/></li>
-          </ul>
-        </div>
+      <p>These are some of the technologies and platforms I used to develop with throughout my career. These tools
+        allowed me to create breathtaking applications that provide features ranging from VR applications to
+        cross-platform mobile applications.</p>
+      <div class="grid">
+        <ul class="g-col-6" style="color: whitesmoke;">
+          <li>iOS <img src="https://www.freeiconspng.com/thumbs/ios-png/os7-style-metro-ui-icon-19.png"
+              class="language-icon" /></li>
+          <li>Android<img src="https://cdn-icons-png.flaticon.com/512/174/174836.png" class="language-icon" /></li>
+          <li>Linux <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" class="language-icon" /></li>
+          <li>Unity <img
+              src="https://preview.redd.it/tu3gt6ysfxq71.png?auto=webp&s=10ab55d9dc09e7ed6ea59bd5916800a5272d5969"
+              class="language-icon" /></li>
+          <li>Unreal <img
+              src="https://uploads-ssl.webflow.com/5f68d1cc3287732f65cabcfb/5f7bb1a87071da59085eab5a_UNREAL_WHT.png"
+              class="language-icon" /></li>
+          <li>Artificial Intelligence <img
+              src="https://icon-library.com/images/machine-learning-icon/machine-learning-icon-28.jpg"
+              class="language-icon" /></li>
+          <li>.NET <img src="https://iconape.com/wp-content/png_logo_vector/microsoft-net-framework-logo.png"
+              class="language-icon" /></li>
+          <li>Virtual Reality Development <img src="https://www.ceekvr.com/static/assets/images/vr-glasses-home.png"
+              class="language-icon" /></li>
+        </ul>
+        <ul class="g-col-6" style="color: whitesmoke;">
+          <li>XCode <img
+              src="https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons/images/app-icon-realistic-materials_2x.png"
+              class="language-icon" /></li>
+          <li>Android Studio <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/1200px-Android_Studio_Icon_%282014-2019%29.svg.png"
+              class="language-icon" /></li>
+          <li>React Native <img src="https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png"
+              class="language-icon" /></li>
+          <li>React <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" class="language-icon" /></li>
+          <li>Git <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" class="language-icon" /></li>
+          <li>JIRA <img src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png" class="language-icon" /></li>
+          <li>NodeJS <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" class="language-icon" /></li>
+          <li>Augmented Reality Development <img src="https://russia-promo.com/uploads/images/ar-icon.png"
+              class="language-icon" /></li>
+        </ul>
+      </div>
     </div>
 
     <div id="Soft Skills" class="skill-container skill-border active-skill" style="display:none">
       <h2 class="skill-title">Soft Skills</h2>
-      <p>Beyond my experience in programming languages and technologies, I have a set of soft skills that allow me to become a great person overall in both the workplace and socially!</p>
-        <div class="grid">
-          <ul class="g-col-6" style="color: whitesmoke;">
-            <li>Agile <img src="https://www.correlation.ca/wp-content/uploads/2022/05/Agile-white.png" class="language-icon"/></li>
-            <li>Adaptive <img src="assets/icons8-adaptive-64.png" class="language-icon" /></li>
-            <li>Collaborative <img src="https://mobilitylab.org/wp-content/uploads/2017/04/collaboration-icon-white.png" class="language-icon" /></li>
-          </ul>
-          <ul class="g-col-6" style="color: whitesmoke;">
-            <li>Enthusiastic <img src="assets/icons8-cheerful-64.png" class="language-icon" /></li>
-            <li>Self-Regulated <img src="assets/icons8-calm-64.png" class="language-icon" /></li>
-            <li>Receptive <img src="assets/icons8-conference-50.png" class="language-icon" /></li>
-          </ul>
-        </div>
+      <p>Beyond my experience in programming languages and technologies, I have a set of soft skills that allow me to
+        become a great person overall in both the workplace and socially!</p>
+      <div class="grid">
+        <ul class="g-col-6" style="color: whitesmoke;">
+          <li>Agile <img src="https://www.correlation.ca/wp-content/uploads/2022/05/Agile-white.png"
+              class="language-icon" /></li>
+          <li>Adaptive <img src="assets/adaptive.png" class="language-icon" /></li>
+          <li>Collaborative <img src="https://mobilitylab.org/wp-content/uploads/2017/04/collaboration-icon-white.png"
+              class="language-icon" /></li>
+        </ul>
+        <ul class="g-col-6" style="color: whitesmoke;">
+          <li>Enthusiastic <img src="assets/cheerfull.png" class="language-icon" /></li>
+          <li>Self-Regulated <img src="assets/calm.png" class="language-icon" /></li>
+          <li>Receptive <img src="assets/receptive.png" class="language-icon" /></li>
+        </ul>
+      </div>
       </p>
     </div>
   </div>
@@ -121,40 +165,53 @@
       <div class="project-card animate" id="myBtn" onclick="openModal('projectModal1')">
         <img src="assets/TorvalSplash.png" />
         <h1>Torval</h1>
-        <p>This was a final group capstone project with two other members and a capstone supervisor, this was during my undergraduate studies that took a year to fully develop. A computer companion on your mobile device that aims to teach and help people who want to build a PC.</p>
+        <p>This was a final group capstone project with two other members and a capstone supervisor, this was during my
+          undergraduate studies that took a year to fully develop. A computer companion on your mobile device that aims
+          to teach and help people who want to build a PC.</p>
       </div>
 
       <div id="projectModal1" class="projectModal">
         <div class="modal-content">
           <div class="project-main">
-            <div class="close"><img src="assets/icons8-macos-close-90.png" /></div>
+            <div class="close"><img src="assets/closeIcon.png" /></div>
             <div>
-              <img src="assets/TorvalSplash.png" class="project-cover"/>
-              <img src="assets/TorvalScreen.png" style="margin-bottom: 15px;"/>
+              <img src="assets/TorvalSplash.png" class="project-cover" />
+              <img src="assets/TorvalScreen.png" style="margin-bottom: 15px;" />
             </div>
             <h1>Torval</h1>
-            <h5 style="font-weight: 300;">During my undergraduate studies, a final group capstone project with two other members and a capstone supervisor was created and presented, this took a year to fully develop. It's a computer companion on your mobile device that aims to teach and help people who want to build a PC.</h5>
+            <h5 style="font-weight: 300;">During my undergraduate studies, a final group capstone project with two other
+              members and a capstone supervisor was created and presented, this took a year to fully develop. It's a
+              computer companion on your mobile device that aims to teach and help people who want to build a PC.</h5>
             <div class="button-group">
               <div class="project-git">
-                <a href="https://github.com/SriAmin/Torval" target="_blank"><img src="https://cdn.freebiesupply.com/logos/large/2x/github-icon-logo-black-and-white.png"/></a>
+                <a href="https://github.com/SriAmin/Torval" target="_blank"><img
+                    src="https://cdn.freebiesupply.com/logos/large/2x/github-icon-logo-black-and-white.png" /></a>
               </div>
               <div class="project-youtube">
-                <a href="https://www.youtube.com/watch?v=WSRVvn9GiSQ" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png"/></a>
+                <a href="https://www.youtube.com/watch?v=WSRVvn9GiSQ" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png" /></a>
               </div>
             </div>
           </div>
           <div class="project-desc">
-            <p>Over the course of my last year during my undergraduate studies for a Bachelors Degree in Mobile Computing, Torval was created which was my final capstone project, a result of my education that was aimed to create a buisness level application.</p>
+            <p>Over the course of my last year during my undergraduate studies for a Bachelors Degree in Mobile
+              Computing, Torval was created which was my final capstone project, a result of my education that was aimed
+              to create a buisness level application.</p>
             <ul class="project-list">
               <li>Developed using <b>React Native</b>, it runs on both <b>iOS and Android Devices</b></li>
-              <li>Capstone supervisor and defense commitee greatly appreciated my efforts and determination to see the project to completion</li>
+              <li>Capstone supervisor and defense commitee greatly appreciated my efforts and determination to see the
+                project to completion</li>
               <li>Learnt many new technologies that I can utilize in the future of my career</li>
               <li>Recieved a <b>90% average</b> for the project and my contributions below</li>
-              <li>Used <b>Augmented Reality</b> to teach users to build a computer, relied on creating 3D models using Blender, and an AR framework to display them</li>
-              <li>Gesture controls such as scaling, and rotating were developed. Navigating across 3D models was also a possibility</li>
+              <li>Used <b>Augmented Reality</b> to teach users to build a computer, relied on creating 3D models using
+                Blender, and an AR framework to display them</li>
+              <li>Gesture controls such as scaling, and rotating were developed. Navigating across 3D models was also a
+                possibility</li>
               <li>Relied on the ViroReact framework which provides an AR environment through <b>JavaScript</b> code</li>
-              <li>Has a social forum that allows user to post forum threads for help, comments, liking, and moderator abilities are all avaliable</li>
-              <li>Used <b>Firebase</b> to provide cloud centric solutions to user account CRUD operations and data storage</li>
+              <li>Has a social forum that allows user to post forum threads for help, comments, liking, and moderator
+                abilities are all avaliable</li>
+              <li>Used <b>Firebase</b> to provide cloud centric solutions to user account CRUD operations and data
+                storage</li>
             </ul>
             <table>
               <tr>
@@ -186,40 +243,51 @@
       </div>
 
       <div class="spacer animate"></div>
-      
+
       <div class="project-card animate" id="myBtn" onclick="openModal('projectModal2')">
         <img src="assets/AuroPaySplash.png" />
         <h1>AuroPay (Talam Pay)</h1>
-        <p>Now known as Talam Pay, AuroPay is mobile solution to an online payment system for Auroville, a village in India. This payment system was aimed to replace the old paper based transaction system where users needed to sign a paper to process a transaction. Currently it's being used by over 100 buisnesses in Auroville.</p>
+        <p>Now known as Talam Pay, AuroPay is mobile solution to an online payment system for Auroville, a village in
+          India. This payment system was aimed to replace the old paper based transaction system where users needed to
+          sign a paper to process a transaction. Currently it's being used by over 100 buisnesses in Auroville.</p>
       </div>
 
       <div id="projectModal2" class="projectModal">
         <!-- Modal content -->
         <div class="modal-content">
           <div class="project-main">
-            <div class="close"><img src="assets/icons8-macos-close-90.png" /></div>
+            <div class="close"><img src="assets/closeIcon.png" /></div>
             <div>
-              <img src="assets/AuroPaySplash.png" class="project-cover"/>
-              <img src="assets/AuroPayScreen.png" style="margin-bottom: 15px;"/>
+              <img src="assets/AuroPaySplash.png" class="project-cover" />
+              <img src="assets/AuroPayScreen.png" style="margin-bottom: 15px;" />
             </div>
             <h1>AuroPay</h1>
-            <h5 style="font-weight: 300;">Now known as TalamPay, AuroPay is a mobile application that acts as an online payment system for a village in India called Auroville. This village has an isolated payment system that doesn't rely on any known banks or online payment systems, previously they used the traditional paper payment system where people had to sign a paper to process any transaction.</h5>
+            <h5 style="font-weight: 300;">Now known as TalamPay, AuroPay is a mobile application that acts as an online
+              payment system for a village in India called Auroville. This village has an isolated payment system that
+              doesn't rely on any known banks or online payment systems, previously they used the traditional paper
+              payment system where people had to sign a paper to process any transaction.</h5>
             <div class="button-group">
               <div class="project-web">
-                <a href="https://cocreate.auroville.org/works/a955d491-2600-4bef-9f89-c1d3a2d95818" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"/></a>
+                <a href="https://cocreate.auroville.org/works/a955d491-2600-4bef-9f89-c1d3a2d95818" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" /></a>
               </div>
               <div class="project-youtube">
-                <a href="https://www.youtube.com/watch?v=EjgQLgzfLB0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png"/></a>
+                <a href="https://www.youtube.com/watch?v=EjgQLgzfLB0" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png" /></a>
               </div>
             </div>
           </div>
           <div class="project-desc">
-            <p>During the summer of 2020, I alongside a senior developer, created a React Native application that allowed people in Auroville to send money to each other through their devices, it also allowed QR code scanning to allow users to send quick payments.</p>
+            <p>During the summer of 2020, I alongside a senior developer, created a React Native application that
+              allowed people in Auroville to send money to each other through their devices, it also allowed QR code
+              scanning to allow users to send quick payments.</p>
             <ul class="project-list">
               <li>Developed using <b>React Native</b>, it runs on both <b>iOS and Android Devices</b></li>
-              <li>While the name has changed, the application is currently being <b>used by 100 buisness</b> that provide goods and services in the village</li>
+              <li>While the name has changed, the application is currently being <b>used by 100 buisness</b> that
+                provide goods and services in the village</li>
               <li>Leard the <b>HTTP protocal</b> and making fetch request to web applications</li>
-              <li>Used HTTP fetch request to the online banking web application, with that I was able to process transactions to essentially create the mobile friendly payment system</li>
+              <li>Used HTTP fetch request to the online banking web application, with that I was able to process
+                transactions to essentially create the mobile friendly payment system</li>
               <li>Senior developer appreacited my appitude to learning skills to make the required features</li>
               <li>Project was a part of a volunteer position during the summer of 2020</li>
             </ul>
@@ -249,17 +317,29 @@
       </div>
     </div>
 
-    <div class="project-group" >
+    <div class="project-group">
       <div class="project-card animate" id="myBtn" onclick="openModal('projectModal3')">
-        <img src="https://cdn.mos.cms.futurecdn.net/AiYoZaGW2Y3vZUSBbYrioL.jpg" />
-        <h1>Project 1</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <img src="assets/tbd.png" />
+        <h1>To Be Determined</h1>
+        <p>This current project is in the talks regarding the privacy of its information and whether it can be posted on
+          the website or not.</p>
       </div>
 
       <div id="projectModal3" class="projectModal">
+        <!-- Modal content -->
         <div class="modal-content">
-          <div class="close"><img src="assets/icons8-macos-close-90.png" /></div>
-          <p>Some text in the Modal..</p>
+          <div class="project-main">
+            <div class="close"><img src="assets/closeIcon.png" /></div>
+            <div>
+              <img src="assets/tbd.png" class="project-cover" />
+              <img src="assets/tbd.png" style="margin-bottom: 15px;" />
+            </div>
+            <h1>To Be Determined</h1>
+            <h5 style="font-weight: 300;">This current project is in the talks regarding the privacy of its information
+              and whether it can be posted on the website or not.</h5>
+          </div>
+          <div class="project-desc">
+          </div>
         </div>
       </div>
 
@@ -268,38 +348,48 @@
       <div class="project-card animate" id="myBtn" onclick="openModal('projectModal4')">
         <img src="assets/CrosswordSplash.png" />
         <h1>AI Crossword Project</h1>
-        <p>A project from Harvard's CS50 Introduction to Artifical Intelligence Course, it was centered around using constraint satisfaction to create a crossword puzzle solution with any given crossword board and an array of words. It'll also generate an image which provides a more graphical solution.</p>
+        <p>A project from Harvard's CS50 Introduction to Artifical Intelligence Course, it was centered around using
+          constraint satisfaction to create a crossword puzzle solution with any given crossword board and an array of
+          words. It'll also generate an image which provides a more graphical solution.</p>
       </div>
 
       <div id="projectModal4" class="projectModal">
         <!-- Modal content -->
         <div class="modal-content">
           <div class="project-main">
-            <div class="close"><img src="assets/icons8-macos-close-90.png" /></div>
+            <div class="close"><img src="assets/closeIcon.png" /></div>
             <div>
-              <img src="assets/CrosswordSplash.png" class="project-cover"/>
-              <img src="assets/CrosswordScreen.png" style="margin-bottom: 15px;"/>
+              <img src="assets/CrosswordSplash.png" class="project-cover" />
+              <img src="assets/CrosswordScreen.png" style="margin-bottom: 15px;" />
             </div>
             <h1>AI Crossword Project</h1>
-            <h5 style="font-weight: 300;">Using artifical intelligence, more specifically constraint satisfaction algortihm, I was able to create a program that creates a crossword puzzle solution when given a board and a word bank. The solution will be displayed in the console and as an image.</h5>
+            <h5 style="font-weight: 300;">Using artifical intelligence, more specifically constraint satisfaction
+              algortihm, I was able to create a program that creates a crossword puzzle solution when given a board and
+              a word bank. The solution will be displayed in the console and as an image.</h5>
             <div class="button-group">
               <div class="project-web">
-                <a href="https://cs50.harvard.edu/ai/2020/projects/3/crossword/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"/></a>
+                <a href="https://cs50.harvard.edu/ai/2020/projects/3/crossword/" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" /></a>
               </div>
               <div class="project-youtube">
-                <a href="https://www.youtube.com/watch?v=63_u_tJVU3Q" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png"/></a>
+                <a href="https://www.youtube.com/watch?v=63_u_tJVU3Q" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png" /></a>
               </div>
             </div>
           </div>
           <div class="project-desc">
-            <p>During the summer of 2020, I enrolled into an online course for Harvard which was <b>CS50's Introduction to Artifical Intelligence with Python</b>. In this course, several areas of AI were explored and applied, this is one of the many projects in the course.</p>
+            <p>During the summer of 2020, I enrolled into an online course for Harvard which was <b>CS50's Introduction
+                to Artifical Intelligence with Python</b>. In this course, several areas of AI were explored and
+              applied, this is one of the many projects in the course.</p>
             <ul class="project-list">
               <li>Developed with <b>Python</b></li>
               <li>Utilizes the <b>constraint satisfaction algortihm</b> to be able to solve the crossword puzzle</li>
               <li>Handles any sort of crossword board and bank of words</li>
-              <li>Displays the crossword solution in the terminal, also uses the <b>Python Imaging Library (PIL)</b> to generate an image for a more graphical solution</li>
+              <li>Displays the crossword solution in the terminal, also uses the <b>Python Imaging Library (PIL)</b> to
+                generate an image for a more graphical solution</li>
               <li>Recieved a <b>100% grade</b> for the completion of the requirements for the project</li>
-              <li>Project for Harvard <b>CS50's Introduction to Artifical Intelligence with Python</b>, several other AI projects were involved with this course</li>
+              <li>Project for Harvard <b>CS50's Introduction to Artifical Intelligence with Python</b>, several other AI
+                projects were involved with this course</li>
             </ul>
             <table>
               <tr>
@@ -323,18 +413,17 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
+  </div>
   </div>
 
   <div id="contact">
-      <a href="https://github.com/SriAmin" target="_blank" class="btn btn-3">GitHub <img
-          src="https://cdn.freebiesupply.com/logos/large/2x/github-icon-logo-black-and-white.png"
-          class="contact-img" /></a>
-      <a href="https://www.linkedin.com/in/sri-amin/" target="_blank" class="btn btn-3">LinkedIn <img
-          src="https://www.iconpacks.net/icons/1/free-linkedin-icon-112-thumb.png" class="contact-img" /></a>
-      <a href="mailto:sri.amin@gmail.com" target="_blank" class="btn btn-3">Email <img
-          src="https://cdn.icon-icons.com/icons2/2751/PNG/512/email_icon_176156.png" class="contact-img" /></a>
+    <a href="https://github.com/SriAmin" target="_blank" class="btn btn-3">GitHub <img
+        src="assets/github-mark-white.png" class="contact-img" /></a>
+    <a href="https://www.linkedin.com/in/sri-amin/" target="_blank" class="btn btn-3">LinkedIn <img
+        src="assets/linkedIn-mark-white.png" class="contact-img" /></a>
+    <a href="mailto:sri.amin@gmail.com" target="_blank" class="btn btn-3">Email <img src="assets/mailIcon.png"
+        class="contact-img" /></a>
   </div>
 
   <!-- Scripts for EmailJS -->
