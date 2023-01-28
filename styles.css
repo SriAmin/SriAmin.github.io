@@ -31,6 +31,7 @@ body {
 
 #header {
     display: flex;
+    width: 100%;
     background-color: #181B20;
 }
 
@@ -209,7 +210,7 @@ body {
 }
 
 .project-group {
-    padding: 50px 25px;
+    padding: 20px 25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -541,12 +542,17 @@ body {
     }
 
     .skill-container ul {
-        padding: 5px;
+        padding:2px;
         list-style-image: url("assets/listMarkerSmall.png");
+    }
+
+    .skill-container img {
+        margin: 0px;
     }
 
     .skill-container {
         background-color: #1b1e24;
+        width: 95%;
         height: 55vh;
     }
 
@@ -692,5 +698,35 @@ body {
         margin-top: 3px;
         margin-bottom: 0px;
         padding-left: 10px;
+    }
+
+    #contact span {
+        display: none;
+    }
+
+    .contact-img {
+        width: 25px;
+        border: 0px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #contact {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px;
+    }
+    
+    #contact a {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 962px) {
+    .contact-img {
+        width: 50px;
+        border-left: 0px;
+        padding: 0;
+        margin: 0;
     }
 }
