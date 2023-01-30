@@ -174,7 +174,7 @@ body {
     width: 75%;
     background-color: #1b1e24;
     padding: 0.01em 16px;
-    height: 50vh;
+    height: 450px;
 }
 
 /* If the screen size is 601px wide or more */
@@ -183,7 +183,7 @@ body {
         width: 75%;
         background-color: #1b1e24;
         padding: 0.01em 16px;
-        height: 55vh;
+        height: 450px;
     }
 }
 
@@ -553,7 +553,7 @@ body {
     .skill-container {
         background-color: #1b1e24;
         width: 95%;
-        height: 55vh;
+        height: 400px;
     }
 
     .language-icon {
