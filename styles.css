@@ -141,6 +141,7 @@ body {
 }
 
 .skill-container ul {
+    margin: 0px 10vw;
     list-style-image: url("assets/listMarker.png");
 }
 
@@ -184,6 +185,10 @@ body {
         background-color: #1b1e24;
         padding: 0.01em 16px;
         height: 450px;
+    }
+
+    .skill-container ul {
+        margin: 0px 5vw;
     }
 }
 
@@ -542,7 +547,7 @@ body {
     }
 
     .skill-container ul {
-        padding:2px;
+        margin: 0px 2vw;
         list-style-image: url("assets/listMarkerSmall.png");
     }
 

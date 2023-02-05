@@ -87,3 +87,24 @@ for (var i = 0; i < projectCover.length; i++) {
     event.target.style.opacity = (event.target.style.opacity == 1.0) ? 0.0 : 1.0;
   }
 }
+
+//Get all the hyperlink elements
+var links = document.getElementsByClassName("nav-link");
+
+//Browse the previously created array
+Array.prototype.forEach.call(links, function(elem, index) {
+  //Get the hyperlink target and if it refers to an id go inside condition
+  var elemAttr = elem.getAttribute("href");
+  if(elemAttr && elemAttr.includes("#")) {
+    //Replace the regular action with a scrolling to target on click
+    elem.addEventListener("click", function(ev) {
+      ev.preventDefault();
+      //Scroll to the target element using replace() and regex to find the href's target id
+      document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+          });
+    });
+  }
+});
