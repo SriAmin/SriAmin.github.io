@@ -18,13 +18,10 @@ function openSkill(evt, skillName) {
   evt.currentTarget.className += " selected";
 }
 
-// Get the modal
 var modal;
 
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var spans = document.getElementsByClassName("close");
 
 function openModal(projectId) {
@@ -42,7 +39,6 @@ for (i = 0; i < spans.length; i++) {
   }
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.className += " modal-fadeOut";
@@ -88,18 +84,32 @@ for (var i = 0; i < projectCover.length; i++) {
   }
 }
 
-//Get all the hyperlink elements
 var links = document.getElementsByClassName("nav-link");
+var topBtn = document.getElementById("top-btn");
 
-//Browse the previously created array
+topBtn.addEventListener("click", function(ev) {
+  ev.preventDefault();
+  document.getElementById("navigator").scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest"
+  });
+  
+  topBtn.style.animation = "fadeOut";
+  topBtn.style.animationDuration = "0.25s";
+  topBtn.style.display = "none";
+})
+
 Array.prototype.forEach.call(links, function(elem, index) {
-  //Get the hyperlink target and if it refers to an id go inside condition
   var elemAttr = elem.getAttribute("href");
   if(elemAttr && elemAttr.includes("#")) {
-    //Replace the regular action with a scrolling to target on click
     elem.addEventListener("click", function(ev) {
       ev.preventDefault();
-      //Scroll to the target element using replace() and regex to find the href's target id
+
+      topBtn.style.animation = "fadeIn";
+      topBtn.style.animationDuration = "0.25s";
+      topBtn.style.display = "block"
+
       document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
           behavior: "smooth",
           block: "start",

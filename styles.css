@@ -3,6 +3,16 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
 ::-webkit-scrollbar {
     width: 14px;
   }
@@ -16,17 +26,27 @@ body {
     
   }
 
-.navigator {
+#navigator {
     display: flex;
     flex: 1;
     flex-direction: row;
     border-bottom: 2px solid #b08cfc70;
 }
 
-.navigator * {
+#navigator * {
     font-size: medium;
     color: #AF8CFC;
     padding: 2% 2.5% 1% 2.5%;
+}
+
+#top-btn {
+    position: fixed;
+    bottom: 25px;
+    right:25px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.25s ease-in;
+    z-index: 3;
 }
 
 #header {
@@ -53,16 +73,6 @@ body {
 #header a {
     color: #AF8CFC;
     text-decoration: none;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
-
-@keyframes fadeOut {
-    from { opacity: 1;}
-    to { opacity: 0;}
 }
 
 #cover {
@@ -504,7 +514,7 @@ body {
 
 /* If the screen size is 600px wide or less*/
 @media screen and (max-width: 600px) {
-    .navigator {
+    #navigator {
         display: none;
     }
     #header p {
@@ -654,6 +664,10 @@ body {
         z-index:3;
         text-shadow: 1px 1px #222222;
     }
+
+    .close img {
+        width: 40px;
+    }
     
     .project-main h1 {
         font-size: 3vw;
@@ -724,6 +738,10 @@ body {
     
     #contact a {
         margin: 5px;
+    }
+
+    .btn {
+        padding: 5px 25px;
     }
 }
 
